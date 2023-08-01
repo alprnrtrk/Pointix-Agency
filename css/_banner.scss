@@ -1,0 +1,173 @@
+.banner {
+    @include wrap-fluid;
+    @include flex(row, flex-start, center);
+
+    isolation: isolate;
+    padding-top: 50px;
+    position: relative;
+    overflow: hidden;
+    min-height: 50vh;
+    background-color: $color--secondary;
+
+    h2 {
+        font-size: 33px;
+        font-weight: 600;
+        color: #fff;
+
+        @include devices(xl) {
+            text-align: center;
+
+            font-size: 25px;
+        }
+    }
+
+    .mask-image {
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        left: 0;
+        top: 0;
+        opacity: .2;
+    }
+
+    .mask-logo {
+        position: absolute;
+        z-index: -1;
+        bottom: 0;
+        right: 0;
+        opacity: .2;
+
+        @include devices(xl) {
+            display: none;
+        }
+    }
+
+    @include devices(xl) {
+        @include center;
+    }
+
+    &--small {
+        @include flex(row, space-between, center);
+
+        min-height: 30vh;
+
+        .mask-image {
+            opacity: 1;
+        }
+
+        .mask-logo {
+            position: relative;
+            opacity: 1;
+
+            @include devices(xl) {
+                display: block;
+            }
+        }
+
+        @include devices(xxl) {
+            @include flex(column-reverse, center, center);
+
+            gap: 20px;
+        }
+    }
+
+    &--alt {
+        @include flex(column, center, center);
+
+        padding: 100px 0 100px 0;
+
+        .projects__sliding{
+            @include devices(xl){
+                margin: 0;
+            }
+        }
+
+        h2 {
+            max-width: 700px;
+            text-align: center;
+            color: #000;
+        }
+
+        @include devices(xl) {
+            padding: 0 !important;
+            padding-top: 50px!important;
+        }
+    }
+
+    &--project {
+        @include flex(row, space-between, center);
+
+        .wrapper {
+
+            @include flex(column, flex-start, flex-start);
+
+            gap: 10px;
+
+            h2 {
+                width: 100%;
+                font-size: 30px;
+                font-weight: 500;
+                color: #fff;
+            }
+
+            h3 {
+                width: 100%;
+                font-size: 20px;
+                font-weight: 300;
+                color: #fff;
+            }
+        }
+
+        @include devices(xxl){
+            min-height: 500px;
+        }
+
+        @include devices(xl){
+            @include flex(column, center, center);
+
+            gap: 20px;
+
+            padding-left: 0!important;
+            padding-right: 0!important;
+
+            min-height: 500px;
+
+            text-align: center;
+        }
+    }
+
+    &--blog{
+        @include center;
+        
+        h2{
+            text-align: center;
+        }
+    }
+
+    &--send{
+        h2{
+            width: 100%;
+            font-size: 45px;
+            font-weight: 500;
+            text-align: center;
+
+            @include devices(xl){
+                font-size: 30px;
+            }
+        }
+
+        .mask-logo{
+            left: 0;
+        }
+
+        @include devices(xl){
+            padding: 0!important;
+        }
+    }
+
+    @include devices(xl) {
+        padding: 75px;
+    }
+}

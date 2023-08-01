@@ -1,0 +1,148 @@
+.sticky-dots {
+    position: relative;
+    z-index: 100;
+    overflow: hidden;
+
+    @include wrap;
+    @include center;
+
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    height: auto;
+
+    &__dots {
+        @include flex(column, center, flex-start);
+
+        position: relative;
+        gap: 20px;
+        list-style: none;
+
+        &::before {
+            content: "";
+            position: absolute;
+            z-index: 80;
+            top: 0;
+            left: -1.5px;
+            display: block;
+            width: 3px;
+            height: 100%;
+            background-color: $color--services-foreground;
+        }
+
+        .dot {
+
+            position: relative;
+
+            margin: 45px 0;
+
+            &.active {
+                a {
+                    &::before {
+                        margin-left: 10px;
+                    }
+
+                    &::after {
+                        z-index: 100;
+                        width: 45px;
+                        transition: cubic-bezier(0.65, 0, 0.35, 1) .3s;
+                        transition-delay: .3s;
+                    }
+                }
+            }
+
+            a {
+                width: max-content;
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: block;
+                left: 50%;
+                font-size: 36px;
+                font-weight: 600;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                background-image: linear-gradient(0deg, $color--services-background, $color--services-background);
+                transition: cubic-bezier(0.65, 0, 0.35, 1) .3s;
+
+                &:hover {
+                    &::before {
+                        margin-left: 10px;
+                    }
+
+                    &::after {
+                        z-index: 100;
+                        width: 45px;
+                        transition: cubic-bezier(0.65, 0, 0.35, 1) .3s;
+                        transition-delay: .3s;
+                    }
+                }
+
+                &::before {
+                    transition: cubic-bezier(0.65, 0, 0.35, 1) .3s;
+                    content: "\00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0";
+
+
+                    @include devices(xl) {
+                        content: " \00a0 \00a0 \00a0 \00a0";
+
+                    }
+                }
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    z-index: 100;
+                    top: 50%;
+                    transform: translateY(-50%) translateX(-50%);
+                    border: 5px solid $color--services-background;
+                    display: block;
+                    width: 40px;
+                    aspect-ratio: 1/1;
+                    background-color: inherit;
+                    border-radius: 100%;
+                    transition: cubic-bezier(0.65, 0, 0.35, 1) .3s;
+                }
+
+                @include devices(xl){
+                    @include flex(row, flex-start, center);
+                    
+                    font-size: 20px;
+                    height: 42px;
+                }
+
+            }
+
+            &:last-child {
+                padding-top: 45px;
+            }
+        }
+
+        @include devices(xxl) {
+
+            left: -40%;
+        }
+    }
+
+    .page-tracker {
+        display: block;
+        position: absolute;
+        z-index: 90;
+        transform-origin: center;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 60px;
+        aspect-ratio: 1/1;
+        background-color: $color--services-background;
+        border: 2px solid $color--services-foreground;
+        border-radius: 100%;
+        transition: .3s;
+
+        @include devices(xxl) {
+            left: 0%;
+
+        }
+
+    }
+}

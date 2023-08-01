@@ -1,0 +1,121 @@
+.blog-news {
+    @include wrap-fluid;
+
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background-color: $color--blog-background;
+
+
+    &__title {
+        @include flex(row, space-between, center);
+
+        margin-bottom: 50px;
+
+        h2 {
+            font-size: 31px;
+            font-weight: 700;
+        }
+
+        .buttons {
+            @include center;
+
+            gap: 20px;
+
+            .next,
+            .prev {
+                background-color: transparent;
+                border: 0;
+                transition: cubic-bezier(0.65, 0, 0.35, 1) .6s;
+
+                cursor: pointer;
+
+                i {
+                    font-size: 30px;
+                }
+            }
+
+            .next {
+                &:hover {
+                    transform: translate(10px);
+                }
+            }
+
+            .prev {
+                &:hover {
+                    transform: translate(-10px);
+                }
+            }
+        }
+
+        @include devices(xl){
+            @include flex(column, center, center);
+            
+            gap: 20px;
+        }
+    }
+
+    &__slider {
+        position: relative;
+
+        .swiper-wrapper {
+            .swiper-slide {
+                background-color: $color--blog-card-background;
+
+                .wrapper {
+                    margin: 0;
+                    width: 100%;
+                    aspect-ratio: 67/40;
+
+                    overflow: hidden;
+
+                    &:hover{
+                        img{
+                            transform: scale(1.2);
+                        }
+                    }
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        transition: cubic-bezier(0.65, 0, 0.35, 1) .6s;
+                    }
+                }
+
+                .content {
+                    height: 230px;
+                    padding: 45px;
+
+                    h2 {
+                        font-size: 25px;
+                        margin-bottom: 30px;
+
+                        @include devices(xl){
+                            text-align: center;
+                        }
+                    }
+
+                    p {
+                        font-size: 18px;
+                    }
+
+                    @include devices(xl){
+                        height: 350px;
+                    }
+                }
+            }
+        }
+    }
+
+    .wrapper {
+        @include center;
+
+        width: 100%;
+        margin-top: 50px;
+
+        .btn {
+            text-transform: uppercase;
+            margin: auto;
+        }
+    }
+}

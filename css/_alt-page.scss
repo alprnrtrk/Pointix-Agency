@@ -1,0 +1,142 @@
+.alt-page {
+    @include wrap;
+    @include flex;
+
+    &__side-menu {
+        @include flex(row, flex-start, center);
+
+        position: sticky;
+        width: calc(25%);
+        padding: 20px 0;
+
+        ul {
+            position: relative;
+            list-style: none;
+            border-left: 2px solid #000;
+
+            li {
+                @include flex(row, flex-start, center);
+
+                margin-left: -28px;
+                padding: 10px;
+                position: relative;
+                z-index: 1;
+                margin-bottom: 10px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                a {
+                    margin-left: 36px;
+                    padding: 5px;
+                    width: max-content;
+                    position: relative;
+                    transition: cubic-bezier(0.65, 0, 0.35, 1) .6s;
+
+                    @include devices(xl) {
+                        margin-left: 20px;
+                    }
+                }
+
+                span {
+                    transition: cubic-bezier(0.65, 0, 0.35, 1) .6s;
+                    position: absolute;
+                    z-index: -1;
+                    display: block;
+                    width: 33px;
+                    height: 33px;
+                    border: 5px solid #fff;
+                    background-color: red;
+                    border-radius: 100px;
+
+                    @include devices(xl) {
+                        width: 20px;
+                        height: 20px;
+                        border: 0;
+                    }
+                }
+
+                &.active {
+                    a {
+                        color: #fff;
+                    }
+
+                    span {
+                        width: calc(100% + 10px);
+                        height: 100%;
+                    }
+                }
+
+                &:hover {
+                    a {
+                        color: #fff;
+                    }
+
+                    span {
+                        width: calc(100% + 10px);
+                        height: 100%;
+                    }
+                }
+            }
+
+            @include devices(xl) {
+                @include flex(row, flex-start, flex-start, wrap);
+
+                gap: 0 50px;
+
+                border: 0;
+            }
+        }
+
+        @include devices(xl) {
+            width: 100%;
+
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
+
+    &__content {
+        @include flex(column, flex-start, flex-start);
+
+        gap: 20px;
+
+        width: calc(75%);
+        padding: 20px 0;
+
+        h2 {
+            font-size: 30px;
+            font-weight: 600;
+        }
+
+        p {
+            font-size: 20px;
+            font-weight: 500;
+        }
+
+        img {
+            width: 100%;
+
+            @include devices(xl){
+                aspect-ratio: 1/1;
+                object-fit: cover;
+            }
+        }
+
+        @include devices(xl) {
+            width: 100%;
+
+            text-align: center;
+        }
+    }
+
+    @include devices(xxl) {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    @include devices(xl) {
+        @include flex(column, center, center);
+    }
+}

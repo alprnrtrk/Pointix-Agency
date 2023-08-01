@@ -1,0 +1,150 @@
+.footer {
+    @include wrap-fluid;
+    @include flex(row, space-between, center, wrap);
+
+
+    position: relative;
+    background-color: darken($color--footer-background, 12.1%);
+
+    .upper {
+        @include flex(row, space-between, center);
+
+        width: 100%;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        border-bottom: 1px solid $color--footer-foreground;
+
+        a {
+            img {
+                max-width: 200px;
+                width: 100%;
+            }
+        }
+
+        .con {
+            text-align: right;
+
+            a {
+                font-size: 18px;
+                font-weight: 200;
+                margin-bottom: 5px;
+                color: $color--footer-foreground;
+
+                @include devices(xl) {
+                    margin-bottom: 20px;
+                }
+            }
+
+            h2 {
+                font-size: 35px;
+                font-weight: 400;
+                color: $color--footer-foreground;
+
+                @include devices(xl) {
+                    font-size: 20px;
+                }
+            }
+
+
+            @include devices(xl) {
+                text-align: center;
+            }
+        }
+
+        @include devices(xl) {
+            @include flex(column, center, center);
+            gap: 20px;
+        }
+    }
+
+    .bottom {
+        @include flex(row, space-between, center);
+
+        width: 100%;
+
+        padding-top: 30px;
+        padding-bottom: 30px;
+
+        h2 {
+            font-weight: 200;
+            color: $color--footer-foreground;
+
+            @include devices(xl) {
+                text-align: center
+            }
+        }
+
+        .link {
+            @include flex();
+
+            gap: 10px;
+
+            a {
+                font-weight: 200;
+                color: $color--footer-foreground;
+            }
+        }
+
+
+        @include devices(xl) {
+            @include flex(column, center, center);
+            gap: 20px;
+        }
+    }
+
+    @keyframes sizeup {
+        0%{
+            transform: scale(1);
+            opacity: 1;
+        }
+        100%{
+            transform: scale(1.5);
+            opacity: 0;
+        }
+    }
+
+    .wp{
+        position: absolute;
+
+        top: 0;
+        right: 0;
+        transform: translateY(-50%) translateX(-100%);
+
+        width: 75px;
+        aspect-ratio: 1/1;
+        display: block;
+        background-color: #27d045;
+        color: #fff;
+        border-radius: 100%;
+        transition: cubic-bezier(0.65, 0, 0.35, 1) .6s;
+
+        &:hover{
+            transform: translateY(-50%) translateX(-100%) scale(1.2);
+        }
+
+        &::before{
+            position: absolute;
+            top: 0;
+            left: 0;
+            content: "";
+            width: calc(100% - 6px);
+            height: calc(100% - 6px);
+            border-radius: 100%;
+            border: 3px solid #27d045;
+
+            animation: sizeup 2s infinite;
+        }
+
+        i{
+            width: 100%;
+            height: 100%;
+            @include center;
+
+            font-size: 40px;
+        }
+
+        @include devices(xxl){
+            display: none;
+        }
+    }
+}

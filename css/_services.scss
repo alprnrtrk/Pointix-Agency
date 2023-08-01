@@ -1,0 +1,134 @@
+.services{
+    position: relative;
+
+    &__content{
+        @include flex(column, space-between, flex-start);;
+        left: calc((100% - $wrapper--size) / 2);
+
+        position: absolute;
+        top: 0;
+        padding: 100px 0;
+        width: 50%;
+        height: 100%;
+
+        h2{
+            font-size: 31px;
+            font-weight: 700;
+        }
+
+        h3{
+            max-width: 450px;
+            margin-top: 20px;
+            margin-bottom: auto;
+            font-size: 35px;
+            font-weight: 400;
+
+            @include devices(xxl){
+                max-width: 100%;
+                text-align: center;
+            }
+        }
+
+        a{
+            text-transform: uppercase;
+            
+            i{
+
+            }
+        }
+
+        @include devices(xxl){
+            @include flex(column, center, center);
+
+            gap: 50px;
+            width: 100%;
+            left: 0;
+            position: relative;
+        }
+    }
+
+    @include devices(xxl){
+        @include flex(column-reverse,center,center);
+
+    }
+}
+
+.other-services{
+
+    width: 100%;
+
+    &__title{
+        position: relative;
+        height: max-content;
+        display: block;
+
+        
+        >h2{
+            display: block;
+            height: auto;
+            padding-right: 20px;
+            background-color: #fff;
+            position: relative;
+            z-index: 1;
+            width: max-content;
+            text-transform: capitalize;
+            font-size: 30px;
+            font-weight: 600;
+        }
+
+        &::before{
+            content: "";
+            display: block;
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            height: 2px;
+            background-color: #000;
+        }
+    }
+
+    &__content{
+        margin-top: 20px;
+
+        a{
+            @include flex(column, flex-start , flex-start);
+
+            gap: 20px;
+            padding: 50px;
+
+            img{
+                width: 80px;
+                aspect-ratio: 1/1;
+            }
+            
+            h2{
+                font-size: 31px;
+                font-weight: 600;
+                color: #fff;
+            }
+    
+            p{
+                max-width: 450px;
+                margin-top: 20px;
+                margin-bottom: auto;
+                font-size: 17px;
+                font-weight: 300;
+                color: #fff;
+                text-align: left;
+
+                @include devices(xxl){
+                    max-width: 100%;
+                }
+                
+                
+                @include devices(xl){
+                    text-align: center;
+                }
+            }
+
+            @include devices(xl){
+                @include center;
+            }
+        }
+    }
+}

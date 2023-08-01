@@ -1,0 +1,170 @@
+.contact-us {
+    @include wrap-fluid;
+    @include flex();
+
+    gap: 50px;
+
+    padding-top: 150px;
+    padding-bottom: 50px;
+
+    background-color: #e2e6ef;
+
+    &__panel {
+        @include flex(column, flex-start, flex-start);
+
+        gap: 20px;
+
+        width: calc(60% - 30px);
+
+        h2 {
+            font-size: 25px;
+            font-weight: 700;
+
+            
+            @include devices(xl){
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        h3 {
+            max-width: 480px;
+            width: 100%;
+            font-size: 20px;
+            font-weight: 500;
+
+            @include devices(xl){
+                text-align: center;
+            }
+        }
+
+        form {
+            @include flex(row, flex-start, flex-start, wrap);
+
+            gap: 10px;
+            margin-top: 20px;
+            margin-right: -20px;
+
+            input {
+                width: calc(50% - 10px);
+            }
+
+            textarea {
+                width: calc(100% - 10px);
+
+                resize: none;
+            }
+
+            input,
+            textarea {
+                padding: 25px;
+                border: 0;
+                font-size: 16px;
+                font-weight: 400;
+                color: #A3ABBE;
+                box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.161);
+
+                &::placeholder {
+                    color: inherit;
+                    font-weight: inherit;
+                    font-size: inherit;
+                }
+
+                @include devices(xl){
+                    width: calc(100% - 20px);
+                }
+            }
+
+            >div {
+                @include flex(row, flex-start, center);
+
+                width: 100%;
+
+
+                margin-top: 20px;
+                gap: 20px;
+
+                label{
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 22px;
+                }
+
+                input[type=checkbox] {
+                    visibility: hidden;
+                    width: 30px;
+                }
+
+                .container {
+                    display: block;
+                    position: relative;
+    
+                    cursor: pointer;
+                    font-size: 22px;
+                    -webkit-user-select: none;
+                    -moz-user-select: none;
+                    -ms-user-select: none;
+                    user-select: none;
+                }
+    
+                .checkmark {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform-origin: center center;
+                    transform: translate(-50%, -50%);
+                    height: 40px;
+                    width: 40px;
+                    background-color: #fff;
+                    border-radius: 50%;
+                    border: 5px solid #fff;
+                    transition: cubic-bezier(0.65, 0, 0.35, 1) .3s;
+                }
+    
+                /* On mouse-over, add a grey background color */
+                .container:hover input~.checkmark {
+                    background-color: #ccc;
+                }
+    
+                /* When the radio button is checked, add a blue background */
+                .container input:checked~.checkmark {
+                    background-color: $color--primary;
+                }
+
+            }
+
+            .btn{
+                margin-top: auto;
+                margin-left: auto;
+                margin-right: 10px;
+
+                
+                @include devices(xl){
+
+                    max-width: calc(100% - 20px);
+
+                    margin: auto;
+                    margin-top: 50px;
+                }
+            }
+        }
+
+        @include devices(xl){
+            width: 100%;
+        }
+    }
+
+    &__img {
+        width: 40%;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+
+        @include devices(xl){
+            width: 100%;
+        }
+    }
+
+    @include devices(xl){
+        @include flex(column-reverse, center, center);
+    }
+}

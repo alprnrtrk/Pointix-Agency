@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+$color--body-background: #fffffc;
+$color--body-foreground: #1f262a;
+
+$color--primary: #E83A64;
+$color--secondary: #252B5B; 
+
+$color--navbar-background: #252B5B;
+$color--navbar-foreground: #fefefb;
+
+$color--intro-background: #252B5B;
+$color--intro-foreground: #fefefb;
+$color--intro-pag-active: #E83A64;
+
+$color--short-info-background: #E83A64;
+$color--short-info-foreground: #fefefb;
+
+$color--projects-background: #eeeeee;
+$color--projects-foreground: #1f262a;
+$color--projects-scrollbar-background: #252B5B;
+$color--projects-scrollbar-foreground: linear-gradient(45deg, #4AADB6, #6D81DF)!important;
+
+$color--services-background: #fffffc;
+$color--services-foreground: #1f262a;
+
+$color--blog-background: #eeeeee;
+$color--blog-foreground: #1f262a;
+$color--blog-card-background: #fff;
+
+$color--form-background: #252B5B;
+$color--form-foreground: #fefefb;
+
+$color--footer-background: #252B5B;
+$color--footer-foreground: #fefefb;
+
+$color--about-navs-background: #252B5B;
+$color--about-navs-foreground: #fefefb;
+$color--about-navs-gradient: linear-gradient(45deg, #4AADB6, #6D81DF);
+
+$color--lets-talk-background: #252B5B;
+$color--lets-talk-foreground: #fefefb;
+
+$font--body: 'Poppins', sans-serif;
+
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+$breakpoint-xxl: 1500px;
+
+$wrapper--size: 1363px;

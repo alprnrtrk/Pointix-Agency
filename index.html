@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- slider eklentisi css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+    <!-- css dosyası -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- aniamte.css  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <title>Pointix Digital</title>
+</head>
+
+<body>
+    <section class="navbar">
+        <a href="index.html">
+            <img class="logo" src="img/logos/pointix-digita.webp" alt="şirket logosu (yazılya pointix)">
+        </a>
+        <h2 aria-label="company phone number" class="phone">+90 (850) 346 99 00</h2>
+        <button name="navbar-toggler" aria-label="navbar-toggler" class="toggler" data-role="toggler"
+            data-target=".navbar-collapse">
+            <span></span><span></span><span></span>
+        </button>
+    </section>
+
+    <div aria-label="navbar" class="navbar-collapse">
+        <div class="navbar-collapse__each">
+            <ul class="dotted">
+                <!-- bu bölgedeki data-color kısmına kategörilerin renkleri data-base tarafından çekilmelidir cms panel tarafından hizmet kategorisi eklenirken renk verilmeli ve gerektiği zaman renk değiştirilebilmeli -->
+                <!-- data color hizmetlerin başındaki yuvarlaklar ve mouse ile üzerine geldiğimizde değişecek rengi değiştirmekte -->
+                <li data-color="#006ec4">
+                    <!-- alt services sayfasında element içi style ile verilen background color lar mevcut bu alt sayfalara da yine ilgili kategorinin renk kodu ve görsel ikonu verilmeli -->
+                    <a href="alt-services.html">web tasarım</a>
+                </li>
+                <li data-color="#ff7607">
+                    <!-- alt-services-2 örnek bir alt sayfadır konun daha rahat anlaşılması için -->
+                    <a href="alt-services-2.html">sosyal medya</a>
+                </li>
+                <li data-color="#00c3bf">
+                    <a href="404.html">dijital pazarlama</a>
+                </li>
+                <li data-color="#acdd57">
+                    <a href="404.html">markalaşma</a>
+                </li>
+                <li data-color="#6d7676">
+                    <a href="404.html">sistem / sunucu</a>
+                </li>
+                <li data-color="#ff2f36">
+                    <a href="404.html">360° iletişim</a>
+                </li>
+                <a class="btn btn--small btn--icon btn--empty" href="send-message.html">teklif alın</a>
+            </ul>
+        </div>
+        <div class="navbar-collapse__each">
+            <ul>
+                <li>
+                    <a href="404.html">
+                        Kurumsal Web Tasarım
+                    </a>
+                </li>
+                <li>
+                    <a href="404.html">
+                        UX / UI Tasarımı
+                    </a>
+                </li>
+                <li>
+                    <a href="404.html">
+                        E-ticaret
+                    </a>
+                </li>
+                <li>
+                    <a href="404.html">
+                        Özel Yazılım Çözümleri
+                    </a>
+                </li>
+                <li>
+                    <a href="404.html">
+                        Mobil Uygulama Çözümleri
+                    </a>
+                </li>
+                <li>
+                    <a href="404.html">
+                        Landing Page
+                    </a>
+                </li>
+                <li>
+                    <a href="404.html">
+                        Banner Tasarımı
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="navbar-collapse__each">
+            <ul class="menu">
+                <li>
+                    <a href="about.html">kurumsal</a>
+                </li>
+                <li>
+                    <a href="services.html">hizmetlerimiz</a>
+                </li>
+                <li>
+                    <a href="projects.html">projelerimiz</a>
+                </li>
+                <li>
+                    <a href="blog.html">blog & haber</a>
+                </li>
+                <li>
+                    <a href="contact-us.html">bize ulaşın</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <section class="intro">
+        <!-- "img__slider" ve "text__slider" içerisinde tekrar eden elementlerin sıralaması aynı olmalı -->
+
+        <div class="slider-wrapper">
+            <div class="swiper text__slider">
+                <ul class="swiper-wrapper">
+                    <!-- tekrar edecek element "swipper-slider" -->
+                    <!-- tekrara başla -->
+                    <li class="swiper-slide">
+                        <div class="title">
+                            <!-- gradiant renk kodları data-base üzerinden çekilmelidir diye düşündüm DB den yalnızca 2 renk çekilip # kısmına atanabilir -->
+                            <h2 style="background-image: linear-gradient(135deg, #46B3B0, #7875EB);">
+                                YENİ NESİL 2<br>
+                                DİJİTALLEŞME <br>
+                                NOKTASI <br>
+                            </h2>
+                            <span># 360° Ajans Hizmeti</span>
+                        </div>
+                    </li>
+                    <!-- tekrarı bitir -->
+                    <li class="swiper-slide">
+                        <div class="title">
+                            <h2 style="background-image: linear-gradient(135deg, #53b346, #9aeb75);">
+                                YENİ NESİL 2<br>
+                                DİJİTALLEŞME <br>
+                                NOKTASI <br>
+                            </h2>
+                            <span># 360° Ajans Hizmeti</span>
+                        </div>
+                    </li>
+                    <li class="swiper-slide">
+                        <div class="title">
+                            <h2 style="background-image: linear-gradient(135deg, #4846b3, #e175eb);">
+                                YENİ NESİL <br>
+                                DİJİTALLEŞME <br>
+                                NOKTASI <br>
+                            </h2>
+                            <span># 360° Ajans Hizmeti</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="swiper img__slider">
+                <ul class="swiper-wrapper">
+                    <!-- tekrar edecek element "swipper-slide" -->
+                    <!-- tekrara başla -->
+                    <li class="swiper-slide">
+                        <img src="img/slider-img/1.webp" alt="temsili bir görsel açıklaması">
+                    </li>
+                    <!-- tekrarı bitir -->
+                    <li class="swiper-slide">
+                        <img src="img/slider-img/2.webp" alt="temsili bir görsel açıklaması">
+                    </li>
+                    <li class="swiper-slide">
+                        <img src="img/slider-img/3.webp" alt="temsili bir görsel açıklaması">
+                    </li>
+                </ul>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+
+        <div class="intro__below">
+            <div class="container">
+                <h2>Projeler</h2>
+                <label class="switch" for="checkbox">
+                    <!-- burada intro kısmındaki butonun içinde yazacak yazı ve yönlendireceği link belirtilmekte <input> elementinişn attributelarında ona dikkat edelim -->
+                    <input aria-label="swap between projects and services" data-text-1="Proje Başlatın"
+                        data-link-1="404.html" data-text-2="Hizmet Başlatın" data-link-2="404.html" type="checkbox"
+                        id="checkbox-intro" />
+                    <div class="slider round"></div>
+                </label>
+                <h2>Hizmetler</h2>
+            </div>
+            <span class="line"></span>
+            <a class="toggle btn btn--small btn--icon btn--empty" href="404.html">Proje Başlatın</a>
+        </div>
+    </section>
+
+    <section class="short-info">
+        <ul class="short-info__list">
+            <li class="circle">
+                <div class="wrapper">
+                    <img src="img/short-info/1.webp" alt="temsili resim açıklaması">
+                    <h2>planlar,</h2>
+                </div>
+            </li>
+            <li class="circle">
+                <div class="wrapper">
+                    <img src="img/short-info/2.webp" alt="temsili resim açıklaması">
+                    <h2>tasarlar,</h2>
+                </div>
+            </li>
+            <li class="circle">
+                <div class="wrapper">
+                    <img src="img/short-info/3.webp" alt="temsili resim açıklaması">
+                    <h2>geliştiririz.</h2>
+                </div>
+            </li>
+        </ul>
+
+
+        <div class="short-info__content">
+            <h2>pointix</h2>
+            <p>Teknik uzmanlığımız, geniş çözüm portföyümüz, tedarik zinciri yeteneklerimiz ve yenilikçi
+                teknolojilerimizle firmanızın hedefine ulaşması için gerekli olan bütün süreçleri dijitalleştirerek
+                şirketinizi bir sonraki adıma geçirmeye hazırlıyoruz.</p>
+            <a class="btn btn--empty" href="about.html">hakkımızda</a>
+        </div>
+    </section>
+
+    <section class="projects">
+        <div class="projects__sliding">
+
+            <!-- dönen yazı <span> elementi içerisinde olmalı -->
+            <span>WE CREAT YOUR DIGITAL </span>
+        </div>
+
+        <div class="projects__title">
+            <h2 class="">Projelerimiz</h2>
+            <a class="btn btn--gradient btn--bg-gray" href="projects.html">tüm projeler</a>
+        </div>
+
+        <div class="swiper projects__slider">
+            <ul class="swiper-wrapper">
+                <!-- bu kısım tekrarlanırken yer zaman ".swiepr-slide empty" elementi en başta gelmeli ve içi boş olmalı -->
+                <li class="swiper-slide empty">
+
+                </li>
+                <li class="swiper-slide">
+                    <div class="wrapper">
+                        <img src="img/projects/2.webp" alt="temsili resim açıklaması">
+                    </div>
+                    <a href="project-item.html">Test <i class="fa-solid fa-arrow-right"></i></a>
+                    <span>#kurumsal web sitesi 1</span>
+                </li>
+                <li class="swiper-slide">
+                    <div class="wrapper">
+                        <img src="img/projects/3.webp" alt="temsili resim açıklaması">
+                    </div>
+                    <a href="project-item.html">Test <i class="fa-solid fa-arrow-right"></i></a>
+                    <span>#kurumsal web sitesi</span>
+                </li>
+                <li class="swiper-slide">
+                    <div class="wrapper">
+                        <img src="img/projects/1.webp" alt="temsili resim açıklaması">
+                    </div>
+                    <a href="project-item.html">Test <i class="fa-solid fa-arrow-right"></i></a>
+                    <span>#kurumsal web sitesi</span>
+                </li>
+                <li class="swiper-slide">
+                    <div class="wrapper">
+                        <img src="img/projects/2.webp" alt="temsili resim açıklaması">
+                    </div>
+                    <a href="project-item.html">Test <i class="fa-solid fa-arrow-right"></i></a>
+                    <span>#kurumsal web sitesi</span>
+                </li>
+                <li class="swiper-slide">
+                    <div class="wrapper">
+                        <img src="img/projects/2.webp" alt="temsili resim açıklaması">
+                    </div>
+                    <a href="project-item.html">Test <i class="fa-solid fa-arrow-right"></i></a>
+                    <span>#kurumsal web sitesi 1</span>
+                </li>
+                <li class="swiper-slide">
+                    <div class="wrapper">
+                        <img src="img/projects/3.webp" alt="temsili resim açıklaması">
+                    </div>
+                    <a href="project-item.html">Test <i class="fa-solid fa-arrow-right"></i></a>
+                    <span>#kurumsal web sitesi</span>
+                </li>
+                <li class="swiper-slide">
+                    <div class="wrapper">
+                        <img src="img/projects/1.webp" alt="temsili resim açıklaması">
+                    </div>
+                    <a href="project-item.html">Test <i class="fa-solid fa-arrow-right"></i></a>
+                    <span>#kurumsal web sitesi</span>
+                </li>
+                <li class="swiper-slide">
+                    <div class="wrapper">
+                        <img src="img/projects/2.webp" alt="temsili resim açıklaması">
+                    </div>
+                    <a href="project-item.html">Test <i class="fa-solid fa-arrow-right"></i></a>
+                    <span>#kurumsal web sitesi</span>
+                </li>
+            </ul>
+            <div class="mask"></div>
+            <div class="swiper-scrollbar"></div>
+        </div>
+
+    </section>
+
+    <section class="services">
+        <div class="sticky-dots">
+            <ul class="sticky-dots__dots">
+                <!-- her bir tekrarın benzersiz bir id si olmalı -->
+                <!-- tıpkı navbar içerisnde olduğu gibi kategöri renkleri data-color içerisinde tanıtılmalı -->
+                <li id="dot-1" class="dot" data-color="#086eb1">
+                    <a href="alt-services.html">web tasarım</a>
+                </li>
+                <li id="dot-2" class="dot" data-color="#fd7622">
+                    <a href="alt-services-2.html">sosyal medya</a>
+                </li>
+                <li id="dot-3" class="dot" data-color="#1fc3a1">
+                    <a href="404.html">dijital pazarlama</a>
+                </li>
+                <li id="dot-4" class="dot" data-color="#cddd56">
+                    <a href="404.html">markalaşma</a>
+                </li>
+                <li id="dot-5" class="dot" data-color="#707676">
+                    <a href="404.html">sistem sunucu</a>
+                </li>
+                <li id="dot-6" class="dot" data-color="#e12f59">
+                    <a href="404.html">360° iletişim</a>
+                </li>
+            </ul>
+            <span class="page-tracker">
+
+            </span>
+        </div>
+
+        <div class="services__content">
+            <h2>Hizmetlerimiz</h2>
+            <h3>Karmaşık iletişim
+                zorluklarını çözmek ve
+                markanızın dijitalde ilerlemesine yardımcı olmak için varız.
+            </h3>
+            <a class="btn btn--gradient" href="send-message.html">teklif alın <i
+                    class="fa-solid fa-arrow-right"></i></a>
+        </div>
+    </section>
+
+
+    <section class="form">
+        <div class="form__title">
+            <h2>Projenizi Konuşalım</h2>
+        </div>
+
+        <div class="wrapper">
+            <img src="img/form/1.webp" alt="temsili resim açıklaması">
+            <form action="">
+                <div class="each long">
+                    <label for="">Ad & Soyad</label>
+                    <input aria-label="full name" name="full name" type="text">
+                </div>
+                <div class="each">
+                    <label for="">Telefon</label>
+                    <input id="phone" aria-label="phone" name="phone" type="text">
+                </div>
+
+                <div class="each">
+                    <label for="">Mail</label>
+                    <input aria-label="e-mail" name="e-mail" type="text">
+                </div>
+
+                <div class="each long">
+                    <label for="">Mesajınız</label>
+                    <textarea aria-label="your message" name="your message" id="" rows="5"></textarea>
+                </div>
+
+                <button class="btn btn--gradient" type="submit">gönder</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="blog-news">
+
+        <div class="blog-news__title">
+            <h2>Blog / Haber</h2>
+            <div class="buttons">
+                <button name="slider previus" aria-label="slider previus" class="prev"><i
+                        class="fa-solid fa-arrow-left"></i></button>
+                <button name="slider next" aria-label="slider next" class="next"><i
+                        class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        </div>
+        <div class="swiper blog-news__slider">
+            <ul class="swiper-wrapper">
+                <li class="swiper-slide">
+                    <a href="blog-item.html">
+                        <div class="wrapper">
+                            <img src="img/blog-news/1.webp" alt="temsili resim açıklaması">
+                        </div>
+                        <div class="content">
+                            <h2>
+                                Lorem Ipsum Dolor Sit Amed!
+                            </h2>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut
+                                labore et dolore magna aliqua…
+                            </p>
+                        </div>
+                    </a>
+                </li>
+                <li class="swiper-slide">
+                    <a href="blog-item.html">
+                        <div class="wrapper">
+                            <img src="img/blog-news/2.webp" alt="temsili resim açıklaması">
+                        </div>
+                        <div class="content">
+                            <h2>
+                                Lorem Ipsum Dolor Sit Amed!
+                            </h2>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut
+                                labore et dolore magna aliqua…
+                            </p>
+                        </div>
+                    </a>
+                </li>
+                <li class="swiper-slide">
+                    <a href="blog-item.html">
+                        <div class="wrapper">
+                            <img src="img/blog-news/1.webp" alt="temsili resim açıklaması">
+                        </div>
+                        <div class="content">
+                            <h2>
+                                Lorem Ipsum Dolor Sit Amed!
+                            </h2>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut
+                                labore et dolore magna aliqua…
+                            </p>
+                        </div>
+                    </a>
+                </li>
+                <li class="swiper-slide">
+                    <a href="blog-item.html">
+                        <div class="wrapper">
+                            <img src="img/blog-news/2.webp" alt="temsili resim açıklaması">
+                        </div>
+                        <div class="content">
+                            <h2>
+                                Lorem Ipsum Dolor Sit Amed!
+                            </h2>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut
+                                labore et dolore magna aliqua…
+                            </p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="wrapper">
+            <a class="btn btn--gradient btn--bg-gray" href="blog.html">tüm içerikler</a>
+        </div>
+    </section>
+
+    <section class="footer">
+        <div class="upper">
+            <a href="index.html">
+                <img src="img/logos/pointix-digita.webp" alt="temsili resim açıklaması">
+            </a>
+            <div class="con">
+                <a href="#">info@pointixdigital.com</a>
+                <h2>+90 (850) 346 99 00</h2>
+            </div>
+        </div>
+        <div class="bottom">
+            <h2>
+                Copyright © 2023 Tüm Haklarımız Saklıdır.
+            </h2>
+
+            <div class="link">
+                <a href="404.html">KVKK</a>
+                <a href="404.html">Çerez Politikası</a>
+            </div>
+        </div>
+
+        <a class="wp" href="404.html"><i class="fab fa-whatsapp"></i></a>
+    </section>
+
+    <!-- jquery -->
+    <script src="js/query.js"></script>
+    <!-- slider eklentisi js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <!-- navbar -->
+    <script src="js/navbar.js"></script>
+    <!-- sticky dots -->
+    <script src="js/sticky-dots.js"></script>
+    <!-- misc -->
+    <script src="js/misc.js"></script>
+    <!-- font-awesome -->
+    <script src="https://kit.fontawesome.com/1ed42e80dd.js" crossorigin="anonymous"></script>
+    <!-- js below is responsible with sliders -->
+    <script src="js/mask.js"></script>
+    <script src="js/keyboard.js"></script>
+    <script src="js/littlesecret.js"></script>
+
+    <!-- sayfadaki bağzı fonksiyornların çalışması için gereken js kodları -->
+
+    <!-- telefon numarası maskasi -->
+
+    <script>
+        jQuery(function ($) {
+            $("#phone").mask("+90 (sss) sss ss ss", { placeholder: " " });
+        });
+
+    </script>
+
+    <!-- swiper.js prop kodları -->
+
+    <script>
+        var $Speed = 1000;
+
+        var TextSwiper = new Swiper(".text__slider", {
+            direction: "horizontal",
+
+            effect: "slide",
+
+            allowTouchMove: false,
+
+            speed: $Speed,
+
+            watchSlidesProgress: true,
+            longSwipesRatio: 0.01,
+            parallax: true,
+
+            lazy: {
+                loadPrevNext: true,
+            },
+        });
+
+
+
+        var ImageSwiper = new Swiper(".img__slider", {
+            direction: "vertical",
+
+
+
+
+            followFinger: false,
+            grabCursor: false,
+            allowTouchMove: false,
+            speed: $Speed,
+
+            watchSlidesProgress: true,
+
+            longSwipesRatio: 0.01,
+
+            parallax: true,
+
+            lazy: {
+                loadPrevNext: true,
+            },
+
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+                renderBullet: function (index, className) {
+                    return '<span class="' + className + '">' + "</span>";
+                },
+            },
+
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+        });
+
+        ImageSwiper.controller.control = this.TextSwiper;
+        TextSwiper.controller.control = this.ImageSwiper;
+
+
+        var swiper = new Swiper(".projects__slider", {
+            slidesPerView: 1,
+            spaceBetween: 20,
+
+            loop: false,
+            speed: 1000,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            scrollbar: {
+                el: ".swiper-scrollbar",
+                draggable: true,
+            },
+            breakpoints: {
+                '1200': {
+                    slidesPerView: 3,
+                    spaceBetween: 0,
+                }
+            },
+        });
+
+        var swiper = new Swiper(".blog-news__slider", {
+            centeredSlides: false,
+            slidesPerView: 1,
+            spaceBetween: 20,
+            navigation: {
+                nextEl: '.next',
+                prevEl: '.prev',
+            },
+            breakpoints: {
+                '1200': {
+                    slidesPerView: 2,
+                    spaceBetween: 30,
+                }
+            },
+        });
+
+        // intro kısmındaki butonun isminin ve adresinin değşimi için gereken kod
+
+        $("#checkbox-intro").change(function () {
+            if (this.checked) {
+                $(".toggle").text($(this).attr("data-text-2"));
+                $(".toggle").attr("href", $(this).attr("data-link-2"));
+            } else {
+                $(".toggle").text($(this).attr("data-text-1"));
+                $(".toggle").attr("href", $(this).attr("data-link-1"));
+            }
+        });
+    </script>
+</body>
+
+</html>

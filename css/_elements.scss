@@ -1,0 +1,113 @@
+.btn {
+    position: relative;
+    z-index: 100;
+    display: inline-block;
+    min-width: max-content;
+    padding: 30px 85px;
+    border-radius: 100px;
+    overflow: hidden;
+    font-size: 17px;
+    font-weight: 600;
+    transition: cubic-bezier(0.65, 0, 0.35, 1) .6s;
+    letter-spacing: 2px;
+    border: 2px solid transparent;
+    cursor: pointer;
+
+    &:focus {
+        transform: scale(1.05);
+    }
+
+    @include devices(xl) {
+        padding: 10px 20px;
+        font-size: 13px;
+    }
+
+    &--small {
+        padding: 15px 30px;
+    }
+
+    &--gradient {
+        background-color: $color--primary;
+        color: $color--intro-foreground;
+
+        &:hover {
+            border-color: $color--secondary;
+            background-size: 200% 200%;
+            color: $color--secondary;
+
+            &::before {
+                right: 0;
+            }
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            right: 100%;
+            display: block;
+            width: 100%;
+            height: 100%;
+            background-color: $color--intro-foreground;
+            border-radius: 100px;
+            transition: cubic-bezier(0.65, 0, 0.35, 1) .6s;
+        }
+    }
+
+    &--empty {
+        background-color: transparent;
+        color: $color--intro-foreground;
+        border: 2px solid $color--intro-foreground;
+
+        &:hover {
+            color: $color--intro-background;
+            border-color: transparent;
+
+            &::before {
+                right: 0;
+            }
+
+            &::after {
+                -webkit-text-stroke-color: $color--intro-background;
+            }
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            right: 100%;
+            display: block;
+            width: 100%;
+            height: 100%;
+            background-color: $color--intro-foreground;
+            border-radius: 100px;
+            transition: cubic-bezier(0.65, 0, 0.35, 1) .6s;
+        }
+    }
+
+    &--icon {
+        &::after {
+            margin-left: 10px;
+            font-family: "Font Awesome 5 Free";
+            content: "\f1d8";
+            color: transparent;
+            -webkit-text-stroke: 1px $color--intro-foreground;
+            transition: cubic-bezier(0.65, 0, 0.35, 1) .6s;
+        }
+    }
+
+    &--bg-gray {
+        &::before{
+            background-color: $color--projects-background;
+        }
+    }
+    
+    &--bg-blue {
+        &::before{
+            background-color: #e2e6ef;
+        }
+    }
+}

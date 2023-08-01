@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- slider eklentisi css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+    <!-- css dosyası -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- aniamte.css  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <title>Pointix Digital</title>
+</head>
+
+<body>
+    <section class="navbar alt">
+        <a href="index.html">
+            <img class="logo" src="img/logos/pointix-digita.webp" alt="şirket logosu (yazılya pointix)">
+        </a>
+        <h2 aria-label="company phone number" class="phone">+90 (850) 346 99 00</h2>
+        <button name="navbar-toggler" aria-label="navbar-toggler" class="toggler" data-role="toggler"
+            data-target=".navbar-collapse">
+            <span></span><span></span><span></span>
+        </button>
+    </section>
+
+    <div aria-label="navbar" class="navbar-collapse">
+        <div class="navbar-collapse__each">
+            <ul class="dotted">
+                <!-- bu bölgedeki data-color kısmına kategörilerin renkleri data-base tarafından çekilmelidir cms panel tarafından hizmet kategorisi eklenirken renk verilmeli ve gerektiği zaman renk değiştirilebilmeli -->
+                <!-- data color hizmetlerin başındaki yuvarlaklar ve mouse ile üzerine geldiğimizde değişecek rengi değiştirmekte -->
+                <li data-color="#006ec4">
+                    <!-- alt services sayfasında element içi style ile verilen background color lar mevcut bu alt sayfalara da yine ilgili kategorinin renk kodu ve görsel ikonu verilmeli -->
+                    <a href="alt-services.html">web tasarım</a>
+                </li>
+                <li data-color="#ff7607">
+                    <!-- alt-services-2 örnek bir alt sayfadır konun daha rahat anlaşılması için -->
+                    <a href="alt-services-2.html">sosyal medya</a>
+                </li>
+                <li data-color="#00c3bf">
+                    <a href="404.html">dijital pazarlama</a>
+                </li>
+                <li data-color="#acdd57">
+                    <a href="404.html">markalaşma</a>
+                </li>
+                <li data-color="#6d7676">
+                    <a href="404.html">sistem / sunucu</a>
+                </li>
+                <li data-color="#ff2f36">
+                    <a href="404.html">360° iletişim</a>
+                </li>
+                <a class="btn btn--small btn--icon btn--empty" href="send-message.html">teklif alın</a>
+            </ul>
+        </div>
+        <div class="navbar-collapse__each">
+            <ul>
+                <li>
+                    <a href="404.html">
+                        Kurumsal Web Tasarım
+                    </a>
+                </li>
+                <li>
+                    <a href="404.html">
+                        UX / UI Tasarımı
+                    </a>
+                </li>
+                <li>
+                    <a href="404.html">
+                        E-ticaret
+                    </a>
+                </li>
+                <li>
+                    <a href="404.html">
+                        Özel Yazılım Çözümleri
+                    </a>
+                </li>
+                <li>
+                    <a href="404.html">
+                        Mobil Uygulama Çözümleri
+                    </a>
+                </li>
+                <li>
+                    <a href="404.html">
+                        Landing Page
+                    </a>
+                </li>
+                <li>
+                    <a href="404.html">
+                        Banner Tasarımı
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="navbar-collapse__each">
+            <ul class="menu">
+                <li>
+                    <a href="about.html">kurumsal</a>
+                </li>
+                <li>
+                    <a href="services.html">hizmetlerimiz</a>
+                </li>
+                <li>
+                    <a href="projects.html">projelerimiz</a>
+                </li>
+                <li>
+                    <a href="blog.html">blog & haber</a>
+                </li>
+                <li>
+                    <a href="contact-us.html">bize ulaşın</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <section class="banner banner--small banner--alt" style="background-color: #E4E7F0;">
+        <img class="mask-image" src="img/banner/2.webp" alt="detaylı resim açıklaması">
+        <div s class="projects__sliding"><span>WE CREAT YOUR DIGITAL</span>
+        </div>
+        <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+    </section>
+
+    <section class="projects-page">
+        <ul class="projects-page__tabs">
+            <li class="each">
+                <button data-role="tabs" data-target="all" class="active">
+                    Tüm Projeler
+                </button>
+            </li>
+            <li class="each">
+                <button data-role="tabs" data-target="web">
+                    Web Tasarım
+                </button>
+            </li>
+            <li class="each">
+                <button data-role="tabs" data-target="social">
+                    Sosyal Medya
+                </button>
+            </li>
+            <li class="each">
+                <button data-role="tabs" data-target="mobile">
+                    Mobil Uygulama
+                </button>
+            </li>
+            <li class="each">
+                <button data-role="tabs" data-target="brand">
+                    Kurumsal Kimlik
+                </button>
+            </li>
+        </ul>
+        <ul class="projects-page__content">
+            <li class="each active" data-role="content" data-cat="web">
+                <a href="project-item.html">
+                    <div class="wrapper">
+                        <img src="img/projects/1.webp" alt="detaylı resim açıklaması">
+                    </div>
+                    <div class="wrapper--text">
+                        <h2>web Test</h2>
+                        <span>#kurumsal web sitesi 1</span>
+                    </div>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </li>
+            <li class="each active" data-role="content" data-cat="web">
+                <a href="project-item.html">
+                    <div class="wrapper">
+                        <img src="img/projects/2.webp" alt="detaylı resim açıklaması">
+                    </div>
+                    <div class="wrapper--text">
+                        <h2>web Test</h2>
+                        <span>#kurumsal web sitesi 1</span>
+                    </div>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </li>
+            <li class="each active" data-role="content" data-cat="brand">
+                <a href="project-item.html">
+                    <div class="wrapper">
+                        <img src="img/projects/3.webp" alt="detaylı resim açıklaması">
+                    </div>
+                    <div class="wrapper--text">
+                        <h2>brand Test</h2>
+                        <span>#kurumsal web sitesi 1</span>
+                    </div>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </li>
+            <li class="each active" data-role="content" data-cat="brand">
+                <a href="project-item.html">
+                    <div class="wrapper">
+                        <img src="img/projects/2.webp" alt="detaylı resim açıklaması">
+                    </div>
+                    <div class="wrapper--text">
+                        <h2>brand Test</h2>
+                        <span>#kurumsal web sitesi 1</span>
+                    </div>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </li>
+            <li class="each active" data-role="content" data-cat="mobile">
+                <a href="project-item.html">
+                    <div class="wrapper">
+                        <img src="img/projects/2.webp" alt="detaylı resim açıklaması">
+                    </div>
+                    <div class="wrapper--text">
+                        <h2>mobile Test</h2>
+                        <span>#kurumsal web sitesi 1</span>
+                    </div>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </li>
+            <li class="each active" data-role="content" data-cat="social">
+                <a href="project-item.html">
+                    <div class="wrapper">
+                        <img src="img/projects/1.webp" alt="detaylı resim açıklaması">
+                    </div>
+                    <div class="wrapper--text">
+                        <h2>social Test</h2>
+                        <span>#kurumsal web sitesi 1</span>
+                    </div>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </li>
+            <li class="each active" data-role="content" data-cat="web">
+                <a href="project-item.html">
+                    <div class="wrapper">
+                        <img src="img/projects/2.webp" alt="detaylı resim açıklaması">
+                    </div>
+                    <div class="wrapper--text">
+                        <h2>web Test</h2>
+                        <span>#kurumsal web sitesi 1</span>
+                    </div>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </li>
+            <li class="each active" data-role="content" data-cat="brand">
+                <a href="project-item.html">
+                    <div class="wrapper">
+                        <img src="img/projects/3.webp" alt="detaylı resim açıklaması">
+                    </div>
+                    <div class="wrapper--text">
+                        <h2>brand Test</h2>
+                        <span>#kurumsal web sitesi 1</span>
+                    </div>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </li>
+            <li class="each active" data-role="content" data-cat="brand">
+                <a href="project-item.html">
+                    <div class="wrapper">
+                        <img src="img/projects/2.webp" alt="detaylı resim açıklaması">
+                    </div>
+                    <div class="wrapper--text">
+                        <h2>brand Test</h2>
+                        <span>#kurumsal web sitesi 1</span>
+                    </div>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </li>
+            <li class="each active" data-role="content" data-cat="mobile">
+                <a href="project-item.html">
+                    <div class="wrapper">
+                        <img src="img/projects/2.webp" alt="detaylı resim açıklaması">
+                    </div>
+                    <div class="wrapper--text">
+                        <h2>mobile Test</h2>
+                        <span>#kurumsal web sitesi 1</span>
+                    </div>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </li>
+        </ul>
+    </section>
+
+    <section class="footer">
+        <div class="upper">
+            <a href="index.html">
+                <img src="img/logos/pointix-digita.webp" alt="temsili resim açıklaması">
+            </a>
+            <div class="con">
+                <a href="404.html">info@pointixdigital.com</a>
+                <h2>+90 (850) 346 99 00</h2>
+            </div>
+        </div>
+        <div class="bottom">
+            <h2>
+                Copyright © 2023 Tüm Haklarımız Saklıdır.
+            </h2>
+
+            <div class="link">
+                <a href="404.html">KVKK</a>
+                <a href="404.html">Çerez Politikası</a>
+            </div>
+        </div>
+
+        <a class="wp" href="404.html"><i class="fab fa-whatsapp"></i></a>
+    </section>
+
+    <!-- jquery -->
+    <script src="js/query.js"></script>
+    <!-- slider eklentisi js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <!-- navbar -->
+    <script src="js/navbar.js"></script>
+    <!-- misc -->
+    <script src="js/misc.js"></script>
+    <!-- font-awesome -->
+    <script src="https://kit.fontawesome.com/1ed42e80dd.js" crossorigin="anonymous"></script>
+    <!-- js below is responsible with sliders -->
+    <script src="js/mask.js"></script>
+    <script src="js/keyboard.js"></script>
+    <script src="js/littlesecret.js"></script>
+    <script>
+        $('[data-role = "tabs"]').on("click", function(){
+            $('[data-role= "tabs"]').removeClass("active");
+            $(this).addClass("active");
+            
+            if($(this).attr("data-target") == "all"){
+                $('[data-role = "content"]').addClass("active");
+            }else{
+                $('[data-role="content"]').removeClass("active");
+                $('[data-cat = "'+ $(this).attr("data-target") +'"]').addClass("active");
+            }
+        })
+    </script>
+</body>
+
+</html>

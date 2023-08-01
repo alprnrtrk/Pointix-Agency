@@ -1,0 +1,79 @@
+.about-clients {
+    @include wrap;
+    @include flex(row, space-between, center);
+
+    margin-top: 100px;
+    margin-bottom: 100px;
+
+    &__title {
+        width: 33%;
+        padding: 10px;
+        font-size: 33px;
+        line-height: 40px;
+        font-weight: 600;
+
+        @include devices(xl) {
+            font-size: 20px;
+            line-height: normal;
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    &__slider {
+        position: relative;
+        width: 66%;
+        padding-bottom: 50px;
+        .swiper-slide {
+            @include center;
+
+
+            margin: 20px 0;
+            aspect-ratio: 2/1;
+            background-color: transparentize(#000, .9);
+
+            img {
+                opacity: .5;
+                transition: cubic-bezier(0.65, 0, 0.35, 1) .6s;
+            }
+
+            &:hover {
+                img {
+                    opacity: 1;
+                }
+            }
+        }
+
+        .arrows{
+            @include center;
+
+            z-index: 100;
+            gap: 20px;
+
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            position: absolute;
+
+            .next,.prev{
+                cursor: pointer;
+            }
+
+            i{
+                font-size: 30px;
+            }
+
+            @include devices(xl){
+                display: none;
+            }
+        }
+
+        @include devices(xl) {
+            width: 100%;
+        }
+    }
+
+    @include devices(xl) {
+        @include flex(column, center, center);
+    }
+}

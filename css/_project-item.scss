@@ -1,0 +1,319 @@
+.project-item {
+    @include wrap;
+
+
+    &__img-slider {
+        transform: translateY(-150px);
+
+        margin: 20px 0;
+
+        .swiper {
+            overflow-y: visible;
+            position: relative;
+
+            &-slide{
+                padding-bottom: 30px;
+                
+                img{
+                    width: 100%;
+                    object-fit: cover;
+
+                    @include devices(xl){
+                        aspect-ratio: 1/1;
+                    }
+                }
+            }
+
+            &-scrollbar {
+                position: absolute;
+                bottom: 3px;
+                left: 100%;
+                transform: translateX(-100%);
+                width: calc(100% / 3);
+                height: 2px;
+                z-index: 1000;
+
+                background-color: $color--projects-scrollbar-background;
+
+                &-drag {
+                    top: -3px;
+                    height: 10px;
+                    border-radius: 0;
+                    background-image: $color--projects-scrollbar-foreground;
+                }
+
+                @include devices(xl){
+                    width: 100%;
+                }
+            }
+
+            &-wrapper {
+                margin-bottom: 20px;
+            }
+        }
+
+        @include devices(xl){
+            margin-bottom: -100px;
+        }
+    }
+
+    &__what-we-done {
+        @include flex(row, space-between, flex-start, wrap);
+
+        
+        margin: 20px 0;
+        gap: 30px;
+
+        .text-wrapper {
+            width: calc(50% - 30px);
+
+            transform: translateY(-100px);
+
+            h2 {
+                height: 100px;
+                padding: 20px 0;
+                border-bottom: 2px solid #000;
+                font-size: 33px;
+                font-weight: 600;
+
+                
+                @include devices(xl) {
+                    height: auto;
+                }
+
+            }
+
+            p {
+                padding: 20px 0;
+                font-size: 17px;
+                font-weight: 300;
+            }
+
+            @include devices(xl) {
+                width: 100%;
+                transform: translate(0);
+            }
+        }
+
+        .img-wrapper {
+            width: calc(50%);
+
+            img {
+                width: 100%;
+            }
+
+            
+            @include devices(xl) {
+                width: 100%;
+            }
+        }
+
+
+        @include devices(xl) {
+            @include flex(column-reverse, center, center);
+        }
+    }
+
+    &__gallery{
+
+        margin: 20px 0;
+
+        h2{
+            padding: 20px 0;
+            font-size: 33px;
+            font-weight: 600;
+            border-bottom: 2px solid #000;
+        }
+
+        &-slider{
+
+            margin-top: 20px;
+            padding-bottom: 30px;
+
+            .swiper {
+                overflow-y: visible;
+                position: relative;
+                
+    
+                &-slide{
+                    @include center;
+
+                    aspect-ratio: 1/1;
+
+                    
+                    background-color: $color--secondary;
+
+                    img{
+                        opacity: .5;
+                        transition: cubic-bezier(0.65, 0, 0.35, 1) .6s;
+
+                        @include devices(xl){
+                            width: 30%;
+                        }
+                    }
+
+                    &-active{
+                        img{
+                            transform: scale(1.1);
+                            opacity: 1;
+                        }
+                    }
+
+                    &:hover{
+                        img{
+                            transform: scale(1.1);
+                            opacity: 1;
+                        }
+                    }
+                }
+    
+                &-scrollbar {
+                    position: absolute;
+                    bottom: 3px;
+                    left: 100%;
+                    transform: translateX(-100%);
+                    width: calc(100% / 3);
+                    height: 2px;
+                    z-index: 1000;
+    
+                    background-color: $color--projects-scrollbar-background;
+    
+                    &-drag {
+                        top: -3px;
+                        height: 10px;
+                        border-radius: 0;
+                        background-image: $color--projects-scrollbar-foreground;
+                    }
+    
+                    @include devices(xl){
+                        width: 100%;
+                    }
+                }
+    
+                &-wrapper {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+
+    &__other{
+        position: relative;
+
+        padding: 50px 0;
+
+        &::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%);
+            display: block;
+            z-index: -1;
+            width: 100vw;
+            height: 100%;
+            background-color: #E4E7F0;
+        }
+
+        h2{
+            padding: 20px 0;
+            font-size: 33px;
+            font-weight: 600;
+        }
+
+        .swiper{
+            a {
+                @include flex(row, space-between, center, wrap);
+    
+                gap: 10px;
+                padding-bottom: 50px;
+    
+                .wrapper {
+                    overflow: hidden;
+                    aspect-ratio: 44/28;
+                    object-fit: cover;
+    
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        transition: cubic-bezier(0.65, 0, 0.35, 1) .6s;
+                        object-fit: cover;
+                    }
+
+                    @include devices(xl){
+                        aspect-ratio: 1/1;
+                    }
+                }
+    
+                h2 {
+                    font-size: 20px;
+                    font-weight: 600;
+                }
+    
+                span {
+                    font-size: 13px;
+                    font-weight: 500;
+                }
+    
+                i {
+                    font-size: 35px;
+                    margin-right: 50px;
+                    transition: cubic-bezier(0.65, 0, 0.35, 1) .6s;
+
+                    @include devices(xl){
+                        display: none;
+                    }
+                }
+    
+                &:hover{
+                    i{
+                        margin-right: 10px;
+                    }
+    
+                    .wrapper{
+                        img {
+                            transform: scale(1.2);
+                        }
+                    }
+                }
+            }
+        }
+
+        .swiper-button-prev, .swiper-button-next{
+            width: 75px;
+            height: 75px;
+            background-color: #fff;
+            border-radius: 100%;
+
+            top: calc(50% - 50px);
+            transform: translateY(-50%);
+
+            &::after{
+                font-size: 20px;
+                color: #000;
+            }
+
+            @include devices(xl){
+                display: none;
+            }
+        }
+
+        .swiper-pagination{
+            bottom: 0;
+
+            &-bullet{
+                width: 20px;
+                height: 20px;
+
+                &-active{
+                    background-color: $color--primary;
+                }
+            }
+        }
+    }
+
+    @include devices(xxl) {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}

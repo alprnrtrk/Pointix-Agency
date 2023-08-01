@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- slider eklentisi css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+    <!-- css dosyası -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- aniamte.css  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <title>Pointix Digital</title>
+</head>
+
+<body>
+    <section class="navbar alt">
+        <a href="index.html">
+            <img class="logo" src="img/logos/pointix-digita.webp" alt="şirket logosu (yazılya pointix)">
+        </a>
+        <h2 aria-label="company phone number" class="phone">+90 (850) 346 99 00</h2>
+        <button name="navbar-toggler" aria-label="navbar-toggler" class="toggler" data-role="toggler"
+            data-target=".navbar-collapse">
+            <span></span><span></span><span></span>
+        </button>
+    </section>
+
+    <div aria-label="navbar" class="navbar-collapse">
+        <div class="navbar-collapse__each">
+            <ul class="dotted">
+                <!-- bu bölgedeki data-color kısmına kategörilerin renkleri data-base tarafından çekilmelidir cms panel tarafından hizmet kategorisi eklenirken renk verilmeli ve gerektiği zaman renk değiştirilebilmeli -->
+                <!-- data color hizmetlerin başındaki yuvarlaklar ve mouse ile üzerine geldiğimizde değişecek rengi değiştirmekte -->
+                <li data-color="#006ec4">
+                    <!-- alt services sayfasında element içi style ile verilen background color lar mevcut bu alt sayfalara da yine ilgili kategorinin renk kodu ve görsel ikonu verilmeli -->
+                    <a href="alt-services.html">web tasarım</a>
+                </li>
+                <li data-color="#ff7607">
+                    <!-- alt-services-2 örnek bir alt sayfadır konun daha rahat anlaşılması için -->
+                    <a href="alt-services-2.html">sosyal medya</a>
+                </li>
+                <li data-color="#00c3bf">
+                    <a href="404.html">dijital pazarlama</a>
+                </li>
+                <li data-color="#acdd57">
+                    <a href="404.html">markalaşma</a>
+                </li>
+                <li data-color="#6d7676">
+                    <a href="404.html">sistem / sunucu</a>
+                </li>
+                <li data-color="#ff2f36">
+                    <a href="404.html">360° iletişim</a>
+                </li>
+                <a class="btn btn--small btn--icon btn--empty" href="send-message.html">teklif alın</a>
+            </ul>
+        </div>
+        <div class="navbar-collapse__each">
+            <ul>
+                <li>
+                    <a href="404.html">
+                        Kurumsal Web Tasarım
+                    </a>
+                </li>
+                <li>
+                    <a href="404.html">
+                        UX / UI Tasarımı
+                    </a>
+                </li>
+                <li>
+                    <a href="404.html">
+                        E-ticaret
+                    </a>
+                </li>
+                <li>
+                    <a href="404.html">
+                        Özel Yazılım Çözümleri
+                    </a>
+                </li>
+                <li>
+                    <a href="404.html">
+                        Mobil Uygulama Çözümleri
+                    </a>
+                </li>
+                <li>
+                    <a href="404.html">
+                        Landing Page
+                    </a>
+                </li>
+                <li>
+                    <a href="404.html">
+                        Banner Tasarımı
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="navbar-collapse__each">
+            <ul class="menu">
+                <li>
+                    <a href="about.html">kurumsal</a>
+                </li>
+                <li>
+                    <a href="services.html">hizmetlerimiz</a>
+                </li>
+                <li>
+                    <a href="projects.html">projelerimiz</a>
+                </li>
+                <li>
+                    <a href="blog.html">blog & haber</a>
+                </li>
+                <li>
+                    <a href="contact-us.html">bize ulaşın</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <section class="banner banner--send" style="background-color: #E12F59;">
+        <h2>Dijital Hedefler İçin <br>
+            Tüm İhtiyaçlar Bir Arada!</h2>
+        <img class="mask-image" src="img/banner/4.webp" alt="detaylı resim açıklaması">
+        <img class="mask-logo" src="img/banner/5.webp" alt="detaylı resim açıklaması">
+    </section>
+
+    <section class="send-message">
+        <form action="">
+            <ul class="tabs">
+                <li>
+                    <label class="container">
+                        <input id="web" type="checkbox">
+                        <span class="checkmark"></span>
+                        <label for="web">Web Tasarım</label>
+                    </label>
+                </li>
+                <li>
+                    <label class="container">
+                        <input id="social" type="checkbox">
+                        <span class="checkmark"></span>
+                        <label for="social">Sosyal Medya</label>
+                    </label>
+                </li>
+                <li>
+                    <label class="container">
+                        <input id="digital" type="checkbox">
+                        <span class="checkmark"></span>
+                        <label for="digital">Dijital Pazarlama</label>
+                    </label>
+                </li>
+                <li>
+                    <label class="container">
+                        <input id="branding" type="checkbox">
+                        <span class="checkmark"></span>
+                        <label for="branding">Kurumsal Kimlik</label>
+                    </label>
+                </li>
+                <li>
+                    <label class="container">
+                        <input id="server" type="checkbox">
+                        <span class="checkmark"></span>
+                        <label for="server">Sistem/Sunucu</label>
+                    </label>
+                </li>
+            </ul>
+
+            <ul class="inputs">
+                <li class="each">
+                    <div class="title">
+                        <h2>Talep Notu</h2> 
+                        <div class="tooltip"><i class="fas fa-question"></i>
+                            <span class="tooltiptext">Size daha iyi hizmet teklifi sunabilmemiz için ön araştırmada kullanmamız
+                                amacıyla firma veya proje adınızı paylaşabilirsiniz.</span>
+                        </div>
+                    </div>
+                    <textarea name="youre message" aria-label="youre message" id="" cols="30" rows="10"></textarea>
+                </li>
+                <li class="each half">
+                    <div class="title">
+                        <h2>Adınız</h2> 
+                        <div class="tooltip"><i class="fas fa-question"></i>
+                            <span class="tooltiptext">Size iletişimde hitap edebilmemiz için lütfen adınızı paylaşın.</span>
+                        </div>
+                    </div>
+                    <input name="name and surname" aria-label="name and surname" type="text">
+                </li>
+                <li class="each half">
+                    <div class="title">
+                        <h2>Firma veya Projeniz</h2> 
+                        <div class="tooltip"><i class="fas fa-question"></i>
+                            <span class="tooltiptext">Size daha iyi hizmet teklifi sunabilmemiz için ön araştırmada kullanmamız amacıyla firma veya proje adınızı paylaşabilirsiniz.</span>
+                        </div>
+                    </div>
+                    <input name="company name" aria-label="company name" type="text">
+                </li>
+                <li class="each half">
+                    <div class="title">
+                        <h2>E-Posta</h2> 
+                        <div class="tooltip"><i class="fas fa-question"></i>
+                            <span class="tooltiptext">Size teklif gönderimi için kullanılacaktır.</span>
+                        </div>
+                    </div>
+                    <input name="name and surname" aria-label="name and surname" type="text">
+                </li>
+                <li class="each half">
+                    <div class="title">
+                        <h2>Telefon</h2> 
+                        <div class="tooltip"><i class="fas fa-question"></i>
+                            <span class="tooltiptext">Ön bilgi ve teyit için kullanılacaktır, 0 ile başlamadan 10 haneli olarak girin.</span>
+                        </div>
+                    </div>
+                    <input placeholder="+90 (___) __ __" id="phone" name="phone number" aria-label="phone number" type="text">
+                </li>
+                <li class="each half">
+                    <div class="title">
+                        <h2>Son Termin Tarihi</h2> 
+                        <div class="tooltip"><i class="fas fa-question"></i>
+                            <span class="tooltiptext">Dilerseniz, çalışmalarınız için en geç teklif talep ve değerlendirme tarihinizi paylaşabilirsiniz.</span>
+                        </div>
+                    </div>
+                    <input placeholder="gg/aa/yyyy" id="date" name="date" aria-label="date" type="text">
+                </li>
+                <li class="each half">
+                    <div class="title">
+                        <h2>Dosya Gönder</h2> 
+                        <div class="tooltip"><i class="fas fa-question"></i>
+                            <span class="tooltiptext">Varsa talebinize dair bir doküman ya da dosya, yükleyebilirsiniz.</span>
+                        </div>
+                    </div>
+                    <input name="upload file" aria-label="upload file" type="file">
+                </li>
+            </ul>
+            <div>
+                <label class="container">
+                    <input id="checkbox" type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                <label for="checkbox">Pointix Bilişim Teknolojileri Tic.Ltd.Şti’den ticari elektronik ileti almak istiyorum ve bu amaçla kişisel verilerimin işlenmesine ve destek alınan tedarikçilerle paylaşılmasına izin veriyorum.</label>
+            </div>
+            <div>
+                <button type="submit" class="btn btn--gradient btn--small btn--bg-blue">Gönder</button>
+            </div>
+        </form>
+    </section>
+
+
+    <section class="footer">
+        <div class="upper">
+            <a href="index.html">
+                <img src="img/logos/pointix-digita.webp" alt="temsili resim açıklaması">
+            </a>
+            <div class="con">
+                <a href="404.html">info@pointixdigital.com</a>
+                <h2>+90 (850) 346 99 00</h2>
+            </div>
+        </div>
+        <div class="bottom">
+            <h2>
+                Copyright © 2023 Tüm Haklarımız Saklıdır.
+            </h2>
+
+            <div class="link">
+                <a href="404.html">KVKK</a>
+                <a href="404.html">Çerez Politikası</a>
+            </div>
+        </div>
+
+        <a class="wp" href="404.html"><i class="fab fa-whatsapp"></i></a>
+    </section>
+
+    <!-- jquery -->
+    <script src="js/query.js"></script>
+    <!-- slider eklentisi js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <!-- navbar -->
+    <script src="js/navbar.js"></script>
+    <!-- misc -->
+    <script src="js/misc.js"></script>
+    <!-- font-awesome -->
+    <script src="https://kit.fontawesome.com/1ed42e80dd.js" crossorigin="anonymous"></script>
+    <!-- js below is responsible with sliders -->
+    <script src="js/mask.js"></script>
+    <script src="js/keyboard.js"></script>
+    <script src="js/littlesecret.js"></script>
+
+    <script>
+        $(".tabs input").on("click", function () {
+            $(".tabs input").prop("checked", false);
+            $(this).prop("checked", true);
+        })
+
+        jQuery(function ($) {
+            $("#date").mask("ss/ss/ssss", { placeholder: "gg/aa/yyyy" });
+            $("#phone").mask("+90 (sss) ss ss", { placeholder: "+90 (___) __ __" });
+        });
+    </script>
+
+</body>
+
+</html>

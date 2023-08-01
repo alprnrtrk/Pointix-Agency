@@ -1,0 +1,36 @@
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+    font-display: swap;
+    outline: none;
+    box-sizing: border-box;
+}
+
+*::-webkit-scrollbar {
+    display: none;
+}
+
+html,
+body {
+    min-height: 100vh;
+    counter-reset: section;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: $font--body;
+    background-color: $color--body-background;
+    color: $color--body-foreground;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    color: $color--body-foreground;
+}

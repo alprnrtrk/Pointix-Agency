@@ -1,0 +1,99 @@
+.form{
+    @include wrap-fluid;
+
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background-color: $color--form-background;
+
+    &__title{
+        margin-bottom: 100px;
+
+        h2{
+            font-size: 31px;
+            font-weight: 600;
+            color: $color--form-foreground;
+        }
+
+        @include devices(xl){
+            text-align: center
+        }
+    }
+
+    .wrapper{
+        @include flex(row, center, center);
+
+        gap: 20px;
+
+        img{
+            width: 50%;
+        }
+
+        form{
+            @include flex(row, space-between, flex-start, wrap);
+
+            gap: 50px 10px;
+
+            width: 100%;
+            
+            .each{
+                @include flex(column, flex-start, flex-start);
+
+                position: relative;
+                width: calc(100% / 2 - 10px);
+
+                &.long{
+                    width: 100%;
+                }
+
+                label{
+                    margin-bottom: 5px;
+                    color: $color--form-foreground;
+                }
+
+                input,textarea{
+                    width: 100%;
+                    padding: 20px 5px;
+                    background-color: transparent;
+                    border: 0;
+                    color: #fff;
+                    resize: none;
+                    border-radius: 5px;
+
+                    &:focus{
+                        background-color: transparentize($color--form-background, 0.9);
+                    }
+                }
+                
+                &::before{
+                    position: absolute;
+                    display: block;
+                    content: "";
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 2px;
+                    background-color: transparentize($color--form-foreground, 0.5);
+                }
+
+                @include devices(xl){
+                    width: 100%;
+                }
+            }
+
+            button{
+                margin-left: auto;
+
+                text-transform: uppercase;
+                cursor: pointer;
+
+                @include devices(xl){
+                    margin: auto;
+                }
+            }
+        }
+        
+        @include devices(xl){
+            @include flex(column, center, center);
+        }
+    }
+}

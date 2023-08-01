@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="pointix dijital yardımcınız...">
+
+    <!-- slider eklentisi css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+    <!-- css dosyası -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- aniamte.css  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <title>Pointix Digital</title>
+</head>
+
+<body>
+    <section class="navbar alt">
+        <a href="index.html">
+            <img class="logo" src="img/logos/pointix-digita.webp" alt="şirket logosu (yazılya pointix)">
+        </a>
+        <h2 aria-label="company phone number" class="phone">+90 (850) 346 99 00</h2>
+        <button name="navbar-toggler" aria-label="navbar-toggler" class="toggler" data-role="toggler"
+            data-target=".navbar-collapse">
+            <span></span><span></span><span></span>
+        </button>
+    </section>
+
+    <div aria-label="navbar" class="navbar-collapse">
+        <div class="navbar-collapse__each">
+            <ul class="dotted">
+                <!-- bu bölgedeki data-color kısmına kategörilerin renkleri data-base tarafından çekilmelidir cms panel tarafından hizmet kategorisi eklenirken renk verilmeli ve gerektiği zaman renk değiştirilebilmeli -->
+                <!-- data color hizmetlerin başındaki yuvarlaklar ve mouse ile üzerine geldiğimizde değişecek rengi değiştirmekte -->
+                <li data-color="#006ec4">
+                    <!-- alt services sayfasında element içi style ile verilen background color lar mevcut bu alt sayfalara da yine ilgili kategorinin renk kodu ve görsel ikonu verilmeli -->
+                    <a href="alt-services.html">web tasarım</a>
+                </li>
+                <li data-color="#ff7607">
+                    <!-- alt-services-2 örnek bir alt sayfadır konun daha rahat anlaşılması için -->
+                    <a href="alt-services-2.html">sosyal medya</a>
+                </li>
+                <li data-color="#00c3bf">
+                    <a href="404.html">dijital pazarlama</a>
+                </li>
+                <li data-color="#acdd57">
+                    <a href="404.html">markalaşma</a>
+                </li>
+                <li data-color="#6d7676">
+                    <a href="404.html">sistem / sunucu</a>
+                </li>
+                <li data-color="#ff2f36">
+                    <a href="404.html">360° iletişim</a>
+                </li>
+                <a class="btn btn--small btn--icon btn--empty" href="send-message.html">teklif alın</a>
+            </ul>
+        </div>
+        <div class="navbar-collapse__each">
+            <ul>
+                <li>
+                    <a href="404.html">
+                        Kurumsal Web Tasarım
+                    </a>
+                </li>
+                <li>
+                    <a href="404.html">
+                        UX / UI Tasarımı
+                    </a>
+                </li>
+                <li>
+                    <a href="404.html">
+                        E-ticaret
+                    </a>
+                </li>
+                <li>
+                    <a href="404.html">
+                        Özel Yazılım Çözümleri
+                    </a>
+                </li>
+                <li>
+                    <a href="404.html">
+                        Mobil Uygulama Çözümleri
+                    </a>
+                </li>
+                <li>
+                    <a href="404.html">
+                        Landing Page
+                    </a>
+                </li>
+                <li>
+                    <a href="404.html">
+                        Banner Tasarımı
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="navbar-collapse__each">
+            <ul class="menu">
+                <li>
+                    <a href="about.html">kurumsal</a>
+                </li>
+                <li>
+                    <a href="services.html">hizmetlerimiz</a>
+                </li>
+                <li>
+                    <a href="projects.html">projelerimiz</a>
+                </li>
+                <li>
+                    <a href="blog.html">blog & haber</a>
+                </li>
+                <li>
+                    <a href="contact-us.html">bize ulaşın</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <section class="contact-us">
+        <div class="contact-us__panel">
+            <h2>İletişim Formu</h2>
+            <h3>Sorularınız ve talepleriniz için formu kullanarak bize yazın. Sizi arayalım.</h3>
+
+            <form action="">
+                <input type="text" placeholder="Adınız Soyadunuz" aria-label="name and surname" name="name and surname"
+                    id="">
+                <input autocomplete="" type="text" placeholder="Firma Adı" aria-autocomplete="company" name="company name" aria-label="company name" id="">
+                <input type="text" placeholder="Telefon Numaranız" name="phone number" autocomplete="phone number" aria-label="phone number" id="phone">
+                <input type="text" placeholder="E-Posta" name="e mail" aria-label="e mail" id="">
+                <textarea placeholder="Mesajınız..." aria-label="youre message" name="youre message" id="" cols="30" rows="1"></textarea>
+                <div>
+                    <label class="container">
+                        <input id="checkbox" type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label for="checkbox">Pointix Bilişim Teknolojileri Tic.Ltd.Şti’den ticari elektronik ileti almak
+                        istiyorum ve bu amaçla kişisel verilerimin işlenmesine ve destek alınan tedarikçilerle
+                        paylaşılmasına izin veriyorum.</label>
+                </div>
+                <button class="btn btn--gradient btn--small btn--bg-blue" type="submit">Gönder</button>
+            </form>
+        </div>
+        <img class="contact-us__img" src="img/form/2.webp" alt="detaylı resim açıklama">
+    </section>
+
+    <section class="info">
+        <h2 class="info__title">İletişim Bilgileri</h2>
+        <ul class="info__content">
+            <li>
+                <a href="404.html">
+                    <i class="fas fa-location-dot"></i>
+                    <h2>Tugay Yolu Cd. No:20 B Blok Ofisim İstanbul İş Merkezi Kat:16 Ofis:95, 34854 Maltepe/İstanbul
+                    </h2>
+                </a>
+            </li>
+            <li>
+                <a href="404.html">
+                    <i class="fas fa-mobile-button"></i>
+                    <h2>+90 (850) 346 99 00</h2>
+                </a>
+            </li>
+            <li>
+                <a href="404.html">
+                    <i class="fas fa-mobile-button"></i>
+                    <h2>+90 (850) 346 99 00</h2>
+                </a>
+            </li>
+        </ul>
+    </section>
+
+    <section class="google-map">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3014.8922225479073!2d29.163509312068523!3d40.918108971243875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cac57c6de66487%3A0xefeace1e7b702997!2sPointix%20Bili%C5%9Fim%20Teknolojileri!5e0!3m2!1str!2str!4v1686903498917!5m2!1str!2str"
+            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
+    <section class="footer">
+        <div class="upper">
+            <a href="index.html">
+                <img src="img/logos/pointix-digita.webp" alt="temsili resim açıklaması">
+            </a>
+            <div class="con">
+                <a href="404.html">info@pointixdigital.com</a>
+                <h2>+90 (850) 346 99 00</h2>
+            </div>
+        </div>
+        <div class="bottom">
+            <h2>
+                Copyright © 2023 Tüm Haklarımız Saklıdır.
+            </h2>
+
+            <div class="link">
+                <a href="404.html">KVKK</a>
+                <a href="404.html">Çerez Politikası</a>
+            </div>
+        </div>
+
+        <a class="wp" aria-label="bize whatsapp ile iletişime geçin" href="404.html"><i class="fab fa-whatsapp"></i></a>
+    </section>
+
+    <!-- jquery -->
+    <script src="js/query.js"></script>
+    <!-- slider eklentisi js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <!-- navbar -->
+    <script src="js/navbar.js"></script>
+    <!-- misc -->
+    <script src="js/misc.js"></script>
+    <!-- font-awesome -->
+    <script src="https://kit.fontawesome.com/1ed42e80dd.js" crossorigin="anonymous"></script>
+    <!-- js below is responsible with sliders -->
+    <script src="js/mask.js"></script>
+    <script src="js/keyboard.js"></script>
+    <script src="js/littlesecret.js"></script>
+
+    <script>
+        jQuery(function ($) {
+            $("#phone").mask("+90 (sss) ss ss", { placeholder: "+90 (___) __ __" });
+        });
+    </script>
+
+</body>
+
+</html>

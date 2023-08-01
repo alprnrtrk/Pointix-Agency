@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- slider eklentisi css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+    <!-- css dosyası -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- aniamte.css  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <title>Pointix Digital</title>
+</head>
+
+<body>
+    <section class="navbar alt">
+        <a href="index.html">
+            <img class="logo" src="img/logos/pointix-digita.webp" alt="şirket logosu (yazılya pointix)">
+        </a>
+        <h2 aria-label="company phone number" class="phone">+90 (850) 346 99 00</h2>
+        <button name="navbar-toggler" aria-label="navbar-toggler" class="toggler" data-role="toggler"
+            data-target=".navbar-collapse">
+            <span></span><span></span><span></span>
+        </button>
+    </section>
+
+    <div aria-label="navbar" class="navbar-collapse">
+        <div class="navbar-collapse__each">
+            <ul class="dotted">
+                <!-- bu bölgedeki data-color kısmına kategörilerin renkleri data-base tarafından çekilmelidir cms panel tarafından hizmet kategorisi eklenirken renk verilmeli ve gerektiği zaman renk değiştirilebilmeli -->
+                <!-- data color hizmetlerin başındaki yuvarlaklar ve mouse ile üzerine geldiğimizde değişecek rengi değiştirmekte -->
+                <li data-color="#006ec4">
+                    <!-- alt services sayfasında element içi style ile verilen background color lar mevcut bu alt sayfalara da yine ilgili kategorinin renk kodu ve görsel ikonu verilmeli -->
+                    <a href="alt-services.html">web tasarım</a>
+                </li>
+                <li data-color="#ff7607">
+                    <!-- alt-services-2 örnek bir alt sayfadır konun daha rahat anlaşılması için -->
+                    <a href="alt-services-2.html">sosyal medya</a>
+                </li>
+                <li data-color="#00c3bf">
+                    <a href="404.html">dijital pazarlama</a>
+                </li>
+                <li data-color="#acdd57">
+                    <a href="404.html">markalaşma</a>
+                </li>
+                <li data-color="#6d7676">
+                    <a href="404.html">sistem / sunucu</a>
+                </li>
+                <li data-color="#ff2f36">
+                    <a href="404.html">360° iletişim</a>
+                </li>
+                <a class="btn btn--small btn--icon btn--empty" href="send-message.html">teklif alın</a>
+            </ul>
+        </div>
+        <div class="navbar-collapse__each">
+            <ul>
+                <li>
+                    <a href="404.html">
+                        Kurumsal Web Tasarım
+                    </a>
+                </li>
+                <li>
+                    <a href="404.html">
+                        UX / UI Tasarımı
+                    </a>
+                </li>
+                <li>
+                    <a href="404.html">
+                        E-ticaret
+                    </a>
+                </li>
+                <li>
+                    <a href="404.html">
+                        Özel Yazılım Çözümleri
+                    </a>
+                </li>
+                <li>
+                    <a href="404.html">
+                        Mobil Uygulama Çözümleri
+                    </a>
+                </li>
+                <li>
+                    <a href="404.html">
+                        Landing Page
+                    </a>
+                </li>
+                <li>
+                    <a href="404.html">
+                        Banner Tasarımı
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="navbar-collapse__each">
+            <ul class="menu">
+                <li>
+                    <a href="about.html">kurumsal</a>
+                </li>
+                <li>
+                    <a href="services.html">hizmetlerimiz</a>
+                </li>
+                <li>
+                    <a href="projects.html">projelerimiz</a>
+                </li>
+                <li>
+                    <a href="blog.html">blog & haber</a>
+                </li>
+                <li>
+                    <a href="contact-us.html">bize ulaşın</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- bu yazının atlındaki tüm background-color propları kategori rengini almalı -->
+
+
+    <section class="banner banner--small" style="background-color: #006ec4;">
+        <h2>Kullanıcı deneyimi yüksek marka hedeflerinizle <br>
+            uyumlu web projeleri tasarlıyoruz.!</h2>
+        <!-- mask-image ise düz renk üzerine istenilen maskeleme resmi olmalıdır -->
+        <img class="mask-image" src="img/banner/2.webp" alt="">
+        <!-- mask-logo elementi kategori ikonu olmalı -->
+        <img class="mask-logo" src="img/panels/1.webp" alt="">
+    </section>
+
+    <section class="alt-page">
+        <div class="alt-page__side-menu">
+            <ul>
+                <!-- seçili menü itemi "active" classına sahip olmalı -->
+                <li class="active">
+                    <a class="active" href="404.html">Kurumsal Web Tasarım</a>
+                    <!-- span içerisinde bulunan background-color kategori rengi olmaludur -->
+                    <span style="background-color: #006ec4;"></span>
+                </li>
+                <li>
+
+                    <a href="404.html">UX / UI Tasarımı</a>
+                    <span style="background-color: #006ec4;"></span>
+                </li>
+                <li>
+                    <a href="404.html">E-ticaret</a>
+                    <span style="background-color: #006ec4;"></span>
+                </li>
+                <li>
+                    <a href="404.html">Özel Yazılım</a>
+                    <span style="background-color: #006ec4;"></span>
+                </li>
+                <li>
+                    <a href="404.html">Mobil Uygulama</a>
+                    <span style="background-color: #006ec4;"></span>
+                </li>
+                <li>
+                    <a href="404.html">Landing Page</a>
+                    <span style="background-color: #006ec4;"></span>
+                </li>
+                <li>
+                    <a href="404.html">Banner Tasarımı</a>
+                    <span style="background-color: #006ec4;"></span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="alt-page__content">
+            <img src="img/alt/1.webp" alt="">
+            <h2>Sorunsuz müşteri etkileşimi için UX / UI deneyim ve tasarım stratejileri geliştiriyoruz.</h2>
+            <p>Pointix web projelerinde hedef müşterilerinizin ihtiyaçlarını ve deneyimlerini analiz ederek, işe
+                müşteriniz üzerinde derinlemesine araştırma yapmakla başlarıyoruz ve hedef kitleniz için en farklı
+                tasarımı uyguluyoruz. Güçlü, iyi tasarlanmış kullanıcı arayüzleri aracılığıyla, şirketlerin
+                müşterilerine sorunsuz ve keyifli bir kullanıcı deneyimi sunmasına yardımcı oluyoruz.</p>
+
+            <div class="about-tabs about-tabs--alt-page">
+                <div class="wrapper">
+                    <ul class="about-tabs__content-tabs">
+                        <!-- sayfa yüklendiğinde en az bir li nin "active" classına sahip olması lazım -->
+                        <!-- her li nin benzersiz id'ye sahip olması gerekmekte -->
+                        <!-- bu alan en fazla 3 element desteklemekte -->
+                        <!-- data-target açması gereken elementin id si olacak şekilde tasarlandı kod -->
+                        <li class="active" data-role="tab" data-wrapper="#desc" data-target="#1">
+                            Deneyim Stratejisi
+                        </li>
+                        <li data-role="tab" data-wrapper="#desc" data-target="#2">
+                            Kullanıcı Arayüzü
+                        </li>
+                        <li data-role="tab" data-wrapper="#desc" data-target="#3">
+                            Konsept Geliştirme
+                        </li>
+                    </ul>
+
+                    <ul class="about-tabs__content-desc" id="desc">
+                        <!-- sayfa yüklendiğinde en az bir li nin "active" classına sahip olması lazım -->
+                        <!-- her li nin benzersiz id'ye sahip olması gerekmekte -->
+                        <!-- bu alan en fazla 3 element desteklemekte -->
+                        <li id="1" class="active">
+                            11Web projelerimizde hizmetlerinizi ön planda tutan, tüm dijital mecralar ile uyumlu, SEO
+                            dinamiklerine entegre ve Google algoritmalarında etkili ve anlaşılır bir tasarım dili
+                            sağlıyoruz.
+                        </li>
+                        <li id="2">
+                            22Web projelerimizde hizmetlerinizi ön planda tutan, tüm dijital mecralar ile uyumlu, SEO
+                            dinamiklerine entegre ve Google algoritmalarında etkili ve anlaşılır bir tasarım dili
+                            sağlıyoruz.
+                        </li>
+                        <li id="3">
+                            33Web projelerimizde hizmetlerinizi ön planda tutan, tüm dijital mecralar ile uyumlu, SEO
+                            dinamiklerine entegre ve Google algoritmalarında etkili ve anlaşılır bir tasarım dili
+                            sağlıyoruz.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="swiper other-services">
+                <div class="other-services__title">
+                    <h2>diğer hizmetler</h2>
+                </div>
+
+                <ul class="swiper-wrapper">
+                    <li class="swiper-slide other-services__content">
+                        <!-- renkler yine her kategöri için database den çekilmeli -->
+                        <a href="404.html" style="background-color: #fd7622;">
+                            <img src="img/panels/2.webp" alt="">
+                            <h2>Sosyal Medya</h2>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+                        </a>
+                    </li>
+                    <li class="swiper-slide other-services__content">
+                        <a href="404.html" style="background-color: #1fc3a1;">
+                            <img src="img/panels/3.webp" alt="">
+                            <h2>Dijital Pazarlama</h2>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+                        </a>
+                    </li>
+                    <li class="swiper-slide other-services__content">
+                        <a href="404.html" style="background-color: #bcce35;">
+                            <img src="img/panels/4.webp" alt="">
+                            <h2>Branding</h2>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+                        </a>
+                    </li>
+                    <li class="swiper-slide other-services__content">
+                        <a href="404.html" style="background-color: #707676;">
+                            <img src="img/panels/5.webp" alt="">
+                            <h2>Sistem Sunucu</h2>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+
+                        </a>
+                    </li>
+                    <li class="swiper-slide other-services__content">
+                        <a href="404.html" style="background-color: #e12f59;">
+                            <img src="img/panels/6.webp" alt="">
+                            <h2>360 İletişim</h2>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="footer">
+        <div class="upper">
+            <a href="index.html">
+                <img src="img/logos/pointix-digita.webp" alt="temsili resim açıklaması">
+            </a>
+            <div class="con">
+                <a href="404.html">info@pointixdigital.com</a>
+                <h2>+90 (850) 346 99 00</h2>
+            </div>
+        </div>
+        <div class="bottom">
+            <h2>
+                Copyright © 2023 Tüm Haklarımız Saklıdır.
+            </h2>
+
+            <div class="link">
+                <a href="404.html">KVKK</a>
+                <a href="404.html">Çerez Politikası</a>
+            </div>
+        </div>
+
+        <a class="wp" href="404.html"><i class="fab fa-whatsapp"></i></a>
+    </section>
+    <!-- jquery -->
+    <script src="js/query.js"></script>
+    <!-- slider eklentisi js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <!-- navbar -->
+    <script src="js/navbar.js"></script>
+    <!-- sticky dots -->
+    <!-- misc -->
+    <script src="js/misc.js"></script>
+    <!-- font-awesome -->
+    <script src="https://kit.fontawesome.com/1ed42e80dd.js" crossorigin="anonymous"></script>
+    <!-- js below is responsible with sliders -->
+    <script src="js/mask.js"></script>
+    <script src="js/keyboard.js"></script>
+    <script src="js/littlesecret.js"></script>
+    <script>
+        var swiper = new Swiper(".other-services", {
+            slidesPerView: 1,
+
+            navigation: {
+                nextEl: ".next",
+                prevEl: ".prev",
+            },
+
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+
+            breakpoints: {
+                1200: {
+                    slidesPerView: 2,
+                    spaceBetween: 10,
+                }
+            }
+        });
+        $("[data-role]").on("click", function () {
+            if ($(this).attr("data-role") == "tab") {
+                $(this).parent().find("li").removeClass("active");
+                $(this).addClass("active");
+                $($(this).attr("data-wrapper")).find("li").removeClass("active");
+                $($(this).attr("data-target")).addClass("active");
+            }
+        })
+    </script>
+</body>
+
+</html>

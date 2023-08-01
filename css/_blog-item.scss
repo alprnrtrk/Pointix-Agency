@@ -1,0 +1,264 @@
+.blog-item{
+    @include wrap;
+    @include flex();
+
+    gap: 40px;
+    padding-top: 100px;
+
+    &__side{
+        width: calc(20%);
+
+        border-left: 2px solid  transparentize(#000000, .75);
+        padding-left: 40px;
+
+        >h2{
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 40px;
+        }
+
+        ul{
+            @include flex(column, flex-start, flex-start);
+
+            gap: 20px;
+
+            list-style: none;
+
+            li{
+                border-bottom: 1px solid transparentize(#000000, .75);
+
+                &:last-child{
+                    border: 0;
+                }
+
+                a{
+                    .wrapper{
+                        overflow: hidden;
+
+                        width: 100%;
+                        aspect-ratio: 3/1.5;
+
+                        img{
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            transition: cubic-bezier(0.65, 0, 0.35, 1) .6s;
+                        }
+                    }
+
+                    h2{
+                        padding: 20px 0;
+                        font-size: 13px;
+                        font-weight: 700;
+                        transition: cubic-bezier(0.65, 0, 0.35, 1) .6s;
+                    }
+
+                    &:hover{
+                        .wrapper{
+                            img{
+                                transform: scale(1.1);
+                            }
+                        }
+
+                        h2{
+                            color: $color--primary;
+                            margin-left: 5px;
+                        }
+                    }
+                }
+            }
+        }
+
+        @include devices(xl){
+            width: 100%;
+
+            border: 0;
+            padding: 0;
+        }
+    }
+
+    &__content{
+        @include flex(column, flex-start, flex-start);
+
+        gap: 30px;
+
+        width: calc(80% - 20px);
+
+        img{
+            aspect-ratio: 90/45;
+            object-fit: cover;
+
+            width: 100%;
+
+            @include devices(xl){
+                aspect-ratio: 1/1;
+            }
+        }
+
+        h2{
+            font-size: 30px;
+            font-weight: 600;
+        }
+        
+        p{
+            font-size: 18px;
+            font-weight: 300;
+        }
+
+        .bottom{
+            @include flex(row, space-between, center);
+
+            padding: 20px 0;
+            width: 100%;
+            border-top: 3px solid transparentize(#000000, .75);
+
+            .social{
+                @include flex(row, center, center);
+                
+                gap: 10px;
+
+                a:not(.share){
+                    @include center;
+
+                    width: 35px;
+                    aspect-ratio: 1/1;
+                    background-color: #6a6a6a;
+                    border-radius: 100%;
+                    color: #fff;
+                    transition: cubic-bezier(0.65, 0, 0.35, 1) .6s;
+
+                    &:hover{
+                        transform: scale(1.1);
+                    }
+
+                    i{
+                        font-size: 13px;
+                    }
+                }
+
+                .share{
+                    margin-left: 15px;
+                    font-size: 15px;
+                    font-weight: 500;
+                    color: #6a6a6a;
+
+                    &:hover{
+                        color: $color--primary;
+                        transition: cubic-bezier(0.65, 0, 0.35, 1) .6s;
+                    }
+                }
+
+                .linkedin{
+                    
+                    transition: cubic-bezier(0.65, 0, 0.35, 1) .6s;
+                    &:hover{
+                        background-color: #0072b1;
+                    }
+                }
+
+                .facebook{
+                    transition: cubic-bezier(0.65, 0, 0.35, 1) .6s;
+                    &:hover{
+                        background-color: #3b5998;
+                    }
+
+                }
+
+                .instagram{
+
+                    position: relative;
+                    background-image: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+
+                    overflow: hidden;
+
+                    i{
+                        position: absolute;
+                        z-index: 1;
+                    }
+
+                    &::before{
+                        position: absolute;
+                        z-index: 0;
+                        content: "";
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        background-color: #6a6a6a;
+                        transition: cubic-bezier(0.65, 0, 0.35, 1) .6s;
+                    }
+
+                    &:hover{
+                        &::before{
+                            background-color: transparent;
+                        }
+                    }
+                }
+            }
+
+            .date{
+                h2{
+                    color: #6a6a6a;
+                    font-size: 15px;
+                    font-weight: 500;
+                }
+            }
+
+            @include devices(xl){
+                @include flex(column, center, center);
+
+                gap: 20px;
+            }
+        }
+
+        @include devices(xl){
+            width: 100%;
+        }
+    }
+
+    @include devices(xxl){
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    @include devices(xl){
+        @include flex(column, center, center);
+    }
+
+    .breadcrumbs{
+        @include flex();
+
+        list-style: none;
+        
+        li{
+
+            &:first-child{
+                a{
+                    &:before{
+                        content: "";
+                    }
+                }
+            }
+
+
+            a{
+                font-size: 15px;
+
+                text-transform: capitalize;
+                transition: cubic-bezier(0.65, 0, 0.35, 1) .6s;
+
+                &:hover{
+                    color: $color--primary;
+                }
+
+                &::before{
+                    content: "/";
+                    margin: 0 10px;    
+                }    
+            }
+        }
+
+        @include devices(xl){
+            display: none;
+        }
+    }
+}

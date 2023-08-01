@@ -1,0 +1,89 @@
+.blog {
+    @include wrap;
+
+    ul {
+        @include flex(row, flex-start, flex-start, wrap);
+
+        position: relative;
+        gap: 100px;
+        padding: 20px 0;
+        list-style: none;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: block;
+            width: 2px;
+            height: 90%;
+            background-color: transparentize(#000000, .5);
+
+
+            @include devices(xl) {
+                display: none;
+            }
+        }
+
+        li {
+            @include flex(column, flex-start, flex-start);
+
+            gap: 20px;
+
+            width: calc(100% / 2 - 50px);
+            transform: translateY(-25%);
+
+            &:nth-child(even) {
+                transform: translateY(0);
+
+                @include devices(xl){
+                    transform: translateY(-25%);
+                }
+            }
+
+            a {
+                font-weight: 600;
+                font-size: 25px;
+
+                transition: cubic-bezier(0.65, 0, 0.35, 1) .6s;
+
+                &:hover{
+                    margin-left: 10px;
+                    color: $color--primary;
+                }
+            }
+
+            p {
+                font-weight: 300;
+                font-size: 18px;
+            }
+
+            img {
+                width: 100%;
+                aspect-ratio: 6/3;
+                object-fit: cover;
+            }
+
+            @include devices(xl) {
+                width: 100%;
+
+                margin: 20px 0;
+
+                transform: translateY(-25%);
+            }
+        }
+
+
+        @include devices(xl) {
+            @include flex(column, center, center);
+
+            gap: 20px;
+        }
+    }
+
+    @include devices(xxl) {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}

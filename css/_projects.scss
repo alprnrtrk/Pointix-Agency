@@ -1,0 +1,342 @@
+@keyframes sliding-animation {
+    0%{
+        transform: translateX(100%);
+    }
+
+    100%{
+        transform: translateX(-100%);
+    }
+}
+
+.projects {
+    padding-top: 100px;
+    padding-bottom: 200px;
+    background-color: $color--projects-background;
+
+    &__title {
+        @include wrap;
+        @include flex(row, space-between);
+
+        margin-bottom: 50px;
+
+        h2 {
+            font-size: 31px;
+            font-weight: 700;
+        }
+
+        .btn {
+            text-transform: uppercase;
+            font-weight: 500;
+            letter-spacing: 2px;
+        }
+
+        @include devices(xxl) {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        @include devices(xl) {
+            @include flex(column, center, center);
+
+            gap: 20px;
+        }
+    }
+
+    &__sliding {
+        @include flex(row, center, center, nowrap);
+
+        margin-bottom: 100px;
+        font-size: 132px;
+        font-weight: 900;
+        letter-spacing: 2px;
+        color: transparentize($color--projects-foreground, .95);
+        animation: sliding-animation 10s linear infinite;
+        transition: 0s;
+
+        span {
+            display: block;
+            margin: 0 500px;
+            white-space: nowrap;
+            font-size: inherit;
+        }
+
+        @include devices(xl) {
+            font-size: 50px;
+            margin-bottom: 50px;
+        }
+    }
+
+    &__slider {
+        position: relative;
+        overflow: visible;
+
+        .swiper {
+            &-wrapper {
+                margin-left: -350px;
+
+                @include devices(xl) {
+                    margin-left: 0;
+                }
+            }
+
+            &-slide {
+                width: calc(100% / 3);
+                height: 550px;
+
+                .wrapper {
+                    width: 100%;
+                    height: 80%;
+                    overflow: hidden;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        transition: cubic-bezier(0.65, 0, 0.35, 1) .3s;
+
+                        &:hover {
+                            transform: scale(1.2);
+                        }
+                    }
+                }
+
+                a {
+                    @include flex(row, flex-start, center);
+
+                    margin-top: 35px;
+                    font-size: 25px;
+                    font-weight: 600;
+                    transition: cubic-bezier(0.65, 0, 0.35, 1) .3s;
+
+                    &:hover {
+                        margin-left: 20px;
+
+                        i {
+                            margin-left: 15px;
+                        }
+                    }
+
+                    i {
+                        font-size: 20px;
+                        margin-left: 10px;
+                        transition: cubic-bezier(0.65, 0, 0.35, 1) .6s;
+                    }
+                }
+
+                span {
+                    display: block;
+                    margin-top: 10px;
+                    font-size: 15px;
+                    font-weight: 600;
+                    opacity: .8;
+                }
+
+                &.empty {
+                    @include devices(xl) {
+                        display: none;
+                    }
+                }
+            }
+
+            &-scrollbar {
+                bottom: -80px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 50%;
+                z-index: 1000;
+
+                background-color: $color--projects-scrollbar-background;
+
+                &-drag {
+                    top: -3px;
+                    height: 10px;
+                    border-radius: 0;
+                    background-image: $color--projects-scrollbar-foreground;
+                }
+            }
+        }
+
+        .mask {
+            position: absolute;
+            z-index: 1000;
+            display: block;
+            top: 0;
+            left: -350px;
+            content: "";
+            width: calc(100% / 3);
+            height: 550px;
+            background-color: $color--projects-background;
+
+            &::before {
+                position: absolute;
+                right: -100%;
+                content: "";
+                display: block;
+                width: 20px;
+                height: 100%;
+                background-color: $color--projects-background;
+            }
+
+            &::after {
+                position: absolute;
+                right: -200%;
+                content: "";
+                display: block;
+                width: 20px;
+                height: 100%;
+                background-color: $color--projects-background;
+            }
+
+            @include devices(xl) {
+                display: none;
+            }
+        }
+
+        @include devices(xl) {
+            padding: 0 20px;
+        }
+    }
+
+    @include devices(xl) {
+        padding-top: 50px;
+    }
+}
+
+.projects-page {
+    @include wrap;
+
+    padding: 50px 0;
+
+    &__tabs {
+        @include flex(row, center, center, wrap);
+
+        padding: 30px 0;
+        gap: 40px;
+
+        list-style: none;
+
+        li {
+            button {
+                background-color: transparent;
+                border: 0;
+                width: max-content;
+                overflow: hidden;
+                position: relative;
+                z-index: 10;
+                padding: 7.5px 0;
+                font-size: 17px;
+                font-weight: 600;
+                transition: cubic-bezier(0.65, 0, 0.35, 1) .6s;
+                cursor: pointer;
+
+                &::before {
+                    z-index: -1;
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: -100%;
+                    width: 100%;
+                    height: 2px;
+                    border-radius: 100px;
+                    background-color: $color--primary;
+                    transition: cubic-bezier(0.65, 0, 0.35, 1) .6s;
+                }
+
+                &.active {
+                    color: $color--primary;
+
+                    &::before {
+                        left: 0;
+                    }
+                }
+
+                &:hover {
+                    color: $color--primary;
+
+                    &::before {
+                        left: 0;
+                    }
+                }
+            }
+        }
+
+        @include devices(xl){
+            gap: 10px 40px
+        }
+    }
+
+    &__content {
+        @include flex(row, flex-start, flex-start, wrap);
+
+        list-style: none;
+
+        li {
+            padding: 0;
+            opacity: 0;
+            width: 0;
+            height: 0;
+            overflow: hidden;
+            transition: opacity cubic-bezier(0.65, 0, 0.35, 1) .6s;
+
+            &.active{
+                opacity: 1;
+                width: calc(100% / 3 - 20px);
+                padding: 30px 10px;
+                height: auto;
+                overflow: visible;
+
+                @include devices(xl){
+                    width: 100%;
+                }
+            }
+
+            a {
+                @include flex(row, space-between, flex-start, wrap);
+
+                gap: 10px;
+
+                .wrapper {
+                    overflow: hidden;
+                    aspect-ratio: 44/28;
+                    object-fit: cover;
+                    margin-bottom: 20px;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        transition: cubic-bezier(0.65, 0, 0.35, 1) .6s;
+                    }
+                }
+
+                h2 {
+                    font-size: 20px;
+                    font-weight: 600;
+                }
+
+                span {
+                    font-size: 13px;
+                    font-weight: 300;
+                }
+
+                i {
+                    font-size: 35px;
+                    margin-right: 20px;
+                    transition: cubic-bezier(0.65, 0, 0.35, 1) .6s;
+                    color: $color--primary;
+                }
+
+                &:hover{
+                    i{
+                        margin-right: 10px;
+                    }
+
+                    .wrapper{
+                        img {
+                            transform: scale(1.2);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

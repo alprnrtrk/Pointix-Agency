@@ -1,0 +1,117 @@
+
+.short-info {
+    @include wrap-fluid;
+    @include flex(column, center, center);
+
+    gap: 50px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    background-color: darken($color--short-info-background, 10%);
+    background-image: url(../img/masks/ox-patern.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+    &__list {
+        @include flex(row, center, center);
+
+        gap: 20px;
+
+        list-style: none;
+
+        .circle {
+            isolation: isolate;
+            position: relative;
+            overflow: hidden;
+            width: 280px;
+            height: 280px;
+            padding: 10px;
+            border-radius: 100%;
+            background-color: lighten($color--short-info-background, 10%);
+
+            &.active{
+                &::before{
+                    top: 0;
+                }
+            }
+
+            &:hover{
+                &::before{
+                    top: 0;
+                }
+            }
+
+            &::before{
+                position: absolute;
+                z-index: -1;
+                top: 100%;
+                left: 0;
+                content: "";
+                width: 100%;
+                height: 100%;
+                background-color: $color--short-info-foreground;
+                transition: cubic-bezier(0.65, 0, 0.35, 1) .6s;
+
+                @include devices(xl){
+                    top: -100%;
+                }
+            }
+
+            .wrapper {
+                @include flex(column, center, center);
+
+                width: 100%;
+                height: 100%;
+                background-color: darken($color--short-info-background, 10%);
+                border-radius: 100%;
+
+                h2{
+                    margin-top: 25px;
+                    font-size: 17px;
+                    font-weight: 400;
+                    text-transform: uppercase;
+                    color: $color--short-info-foreground;
+                }
+            }
+
+            @include devices(xl){
+                width: 200px;
+                height: 200px;
+            }
+        }
+
+        @include devices(xl){
+            @include flex(column, center, center);
+        }
+    }
+
+    &__content{
+        @include flex(column, center, center);
+
+        gap: 30px;
+        text-align: center;
+        color: $color--short-info-foreground;
+        
+        h2{
+            font-size: 43px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        p{
+            max-width: 900px;
+            width: 100%;
+            font-size: 21px;
+            font-weight: 300;
+            line-height: 30px;
+        }
+
+        a{
+            text-transform: uppercase;
+            font-weight: 00;
+            font-size: 15px;
+        }
+    }
+}

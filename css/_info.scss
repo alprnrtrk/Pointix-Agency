@@ -1,0 +1,83 @@
+.info {
+    @include wrap;
+
+    padding: 50px 0;
+
+    &__title {
+        font-size: 25px;
+    }
+
+    &__content {
+        @include flex(row, space-between, center);
+
+        margin-top: 50px;
+        list-style: none;
+
+        li {
+            a {
+                @include flex(row, space-between, center);
+
+                gap: 20px;
+
+                i {
+                    @include center;
+
+                    min-width: 50px;
+                    aspect-ratio: 1/1;
+                    border-radius: 100%;
+                    background-color: #e2e6ef;
+                    color: #000;
+                    font-size: 20px;
+                }
+
+                h2 {
+                    width: max-content;
+                    font-size: 19px;
+                    font-weight: 400;
+
+                    @include devices(xl) {
+                        width: auto;
+                    }
+                }
+
+                @include devices(xl) {
+                    @include flex(row, flex-start, center);
+                }
+            }
+
+            &:first-child {
+                width: 50%;
+
+                a {
+                    h2 {
+                        width: auto;
+                    }
+
+                    @include devices(xl) {
+                        @include flex(row, flex-start, flex-start);
+                    }
+                }
+
+                
+                @include devices(xl) {
+                    width: 100%;
+                }
+            }
+                            
+            @include devices(xl) {
+                width: 100%;
+            }
+        }
+
+        @include devices(xl) {
+            @include flex(column, center, center);
+
+            gap: 20px;
+        }
+    }
+
+    @include devices(xxl) {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
